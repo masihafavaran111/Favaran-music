@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>رفتی که نباشی</title>
+  <title>Rafti Ke Nabashi</title>
 
   <style>
     body {
@@ -38,9 +38,32 @@
       box-shadow: 0 0 25px rgba(0,0,0,0.6);
     }
 
-    h1 {
-      margin-bottom: 10px;
-      font-size: 20px;
+    /* HEADER */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .left, .right {
+      width: 40%;
+    }
+
+    .middle {
+      width: 20%;
+      font-size: 22px;
+      opacity: 0.6;
+    }
+
+    .en {
+      font-size: 12px;
+      opacity: 0.7;
+    }
+
+    .fa {
+      font-size: 14px;
+      font-weight: bold;
     }
 
     img {
@@ -54,7 +77,7 @@
       margin-top: 10px;
     }
 
-    .download-btn {
+    .download {
       display: inline-block;
       margin-top: 15px;
       padding: 12px 18px;
@@ -63,44 +86,92 @@
       color: black;
       font-weight: bold;
       text-decoration: none;
-      box-shadow: 0 0 15px #00ffff;
     }
 
-    .back {
-      display: inline-block;
-      margin-top: 12px;
+    /* MENU */
+    .menu {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: 28px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .menu-box {
+      display: none;
+      position: absolute;
+      top: 55px;
+      left: 15px;
+      background: rgba(0,0,0,0.75);
+      padding: 10px;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+    }
+
+    .menu-box a {
+      display: block;
       color: white;
-      opacity: 0.7;
       text-decoration: none;
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    .menu-box a:hover {
+      color: #00ffff;
     }
   </style>
 </head>
 
 <body>
 
+  <!-- MENU -->
+  <div class="menu" onclick="toggleMenu()">☰</div>
+
+  <div id="menuBox" class="menu-box">
+    <a href="index.html">بیوگرافی فوران</a>
+    <a href="track1.html">رفتی که نباشی</a>
+  </div>
+
+  <!-- BOX -->
   <div class="box">
 
-    <h1>رفتی که نباشی</h1>
+    <!-- HEADER -->
+    <div class="header">
+      <div class="left">
+        <div class="en">Masiha Favaran</div>
+        <div class="fa">مسیحا فوران</div>
+      </div>
 
-    <!-- کاور -->
+      <div class="middle">|</div>
+
+      <div class="right">
+        <div class="en">Rafti Ke Nabashi</div>
+        <div class="fa">رفتی که نباشی</div>
+      </div>
+    </div>
+
+    <!-- COVER -->
     <img src="CoverMusic.png" alt="cover">
 
-    <!-- موزیک -->
+    <!-- AUDIO -->
     <audio controls>
       <source src="RaftiKeNabashi.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- دانلود -->
-    <a class="download-btn" href="RaftiKeNabashi.mp3" download>
-      ⬇ دانلود با کیفیت عالی
+    <!-- DOWNLOAD -->
+    <a class="download" href="RaftiKeNabashi.mp3" download>
+      دانلود با کیفیت 320 - 128
     </a>
 
-    <br>
-
-    <!-- برگشت -->
-    <a class="back" href="index.html">← برگشت به صفحه اصلی</a>
-
   </div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menuBox");
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+  </script>
 
 </body>
 </html>
