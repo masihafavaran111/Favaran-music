@@ -20,82 +20,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Rafti Ke Nabashi</title>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
 
-  <style>
+  background: linear-gradient(-45deg, #0f0f0f, #1a0033, #000000, #001a33);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
 
-    body {
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-      margin: 0;
+.box {
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 0 25px rgba(0,0,0,0.6), 0 0 20px rgba(0, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
 
-      height: 100vh;
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(0,255,255,0.3);
+}
 
-      display: flex;
+p {
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
 
-      justify-content: center;
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #00ffff;
+  color: black;
+  font-weight: bold;
+  box-shadow: 0 0 15px #00ffff;
+  transition: 0.3s;
+}
 
-      align-items: center;
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00ffff;
+}
 
-      background-color: #0f0f0f;
-
-      font-family: sans-serif;
-
-      color: white;
-
-    }
-
-    .box {
-
-      text-align: center;
-
-      padding: 25px;
-
-      border: 1px solid #333;
-
-      border-radius: 10px;
-
-      background-color: #151515;
-
-    }
-
-    h1 {
-
-      font-size: 24px;
-
-      margin-bottom: 15px;
-
-    }
-
-    audio {
-
-      width: 280px;
-
-    }
-
-    .download {
-
-      display: inline-block;
-
-      margin-top: 12px;
-
-      padding: 8px 15px;
-
-      background-color: #ff2e6e;
-
-      color: white;
-
-      text-decoration: none;
-
-      border-radius: 6px;
-
-    }
-
-    .download:hover {
-
-      opacity: 0.8;
-
-    }
-
-  </style>
+audio {
+  width: 100%;
+  margin-top: 15px;
+}
+</style>
 
 </head>
 
