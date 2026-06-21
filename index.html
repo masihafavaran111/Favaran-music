@@ -5,25 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <meta name="description" content="مسیحا فوران، هنرمند مستقل در سبک Hip-Hop, Rap و R&B">
-
   <title>مسیحا فوران | Masiha Favaran Official</title>
 
   <style>
     body {
       margin: 0;
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       font-family: Arial, sans-serif;
       color: white;
       text-align: center;
-
       background: radial-gradient(circle at top, #1a0033, #000000 60%, #000);
-      overflow-x: hidden; /* فیکس مهم برای اسلایدر */
+      overflow-x: hidden;
     }
 
-    /* نورهای بک‌گراند */
     body::before {
       content: "";
       position: fixed;
@@ -68,6 +62,7 @@
       border: 1px solid rgba(255,255,255,0.12);
       box-shadow: 0 0 40px rgba(0,0,0,0.7);
       animation: fadeIn 1s ease;
+      margin: 80px auto 120px;
     }
 
     @keyframes fadeIn {
@@ -96,20 +91,17 @@
       border: 1px solid rgba(0, 255, 255, 0.25);
       color: #00ffff;
       font-size: 13px;
-      letter-spacing: 1px;
-      box-shadow: 0 0 20px rgba(0,255,255,0.1);
     }
 
-    /* منو */
+    /* MENU */
     .menu {
       position: fixed;
       top: 15px;
       left: 15px;
       font-size: 30px;
       cursor: pointer;
-      user-select: none;
       color: #00ffff;
-      text-shadow: 0 0 10px rgba(0,255,255,0.4);
+      z-index: 10000;
     }
 
     .menu-box {
@@ -120,9 +112,7 @@
       background: rgba(0,0,0,0.9);
       padding: 12px;
       border-radius: 12px;
-      border: 1px solid rgba(0,255,255,0.2);
-      z-index: 999;
-      box-shadow: 0 0 20px rgba(0,0,0,0.8);
+      z-index: 10000;
     }
 
     .menu-box a {
@@ -131,44 +121,72 @@
       text-decoration: none;
       padding: 10px;
       font-size: 14px;
-      transition: 0.2s;
     }
 
     .menu-box a:hover {
       color: #00ffff;
-      transform: translateX(5px);
     }
 
+    /* SLIDER */
+    .music-slider {
+      position: fixed;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      width: 92%;
+      max-width: 650px;
+      padding: 12px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      scroll-snap-type: x mandatory;
+      z-index: 9999;
+      -webkit-overflow-scrolling: touch;
     }
-.music-slider {
-  position: fixed;
-  bottom: 12px;
-  left: 50%;
-  transform: translateX(-50%);
 
-  display: flex;
-  gap: 12px;
+    .music-slider::-webkit-scrollbar {
+      display: none;
+    }
 
-  width: 92%;
-  max-width: 650px;
+    .track {
+      flex: 0 0 auto;
+      width: 110px;
+      text-decoration: none;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      scroll-snap-align: center;
+      transition: transform 0.2s ease;
+    }
 
-  padding: 12px;
+    .track img {
+      width: 100px;
+      height: 100px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
 
-  overflow-x: auto;
-  overflow-y: hidden;
+    .track span {
+      margin-top: 6px;
+      font-size: 11px;
+      opacity: 0.8;
+    }
 
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(14px);
+    .track:hover img {
+      transform: scale(1.06);
+    }
 
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-
-  scroll-snap-type: x mandatory;
-  z-index: 9999;
-
-  -webkit-overflow-scrolling: touch;
-      }
-
+    .track:hover span {
+      color: #00ffff;
+      opacity: 1;
+    }
   </style>
 </head>
 
@@ -183,16 +201,12 @@
   </div>
 
   <div class="box">
-
     <h1>مسیحا فوران</h1>
 
     <p class="bio">
       .مسیحا فوران یک هنرمند مستقل در سبک آراندبی و رپ است<br><br>
-
       .او تنظیم، میکس و مسترینگ موزیک‌هایش را خودش انجام می‌دهد<br><br>
-
       .با فضای دارک و ملودی‌های خاص، سعی می‌کند موزیک‌هایی بسازد که احساس واقعی منتقل کنند<br><br>
-
       🎧 Hip-Hop / Rap / R&B<br>
       📍 ایران
     </p>
@@ -200,10 +214,9 @@
     <div class="coming-soon">
       NEW MUSIC • COMING SOON
     </div>
-
   </div>
 
-  <!-- 🎧 SLIDER -->
+  <!-- SLIDER -->
   <div class="music-slider">
 
     <a class="track" href="track1.html">
