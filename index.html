@@ -1,169 +1,193 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Masiha Favaran</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<style>
-*{box-sizing:border-box}
+  <meta name="description" content="مسیحا فوران، هنرمند مستقل در سبک Hip-Hop, Rap و R&B">
+  <title>مسیحا فوران | Masiha Favaran Official</title>
 
-body{
-  margin:0;
-  font-family:Arial;
-  color:white;
-  text-align:center;
-  background:radial-gradient(circle,#1a0033,#000 60%,#000);
-}
+  <style>
+    * { box-sizing: border-box; }
 
-/* glow background */
-body::before, body::after{
-  content:"";
-  position:fixed;
-  width:500px;
-  height:500px;
-  filter:blur(120px);
-  z-index:-1;
-}
-body::before{
-  background:rgba(0,255,255,0.08);
-  top:-100px; left:-100px;
-}
-body::after{
-  background:rgba(255,0,100,0.08);
-  bottom:-100px; right:-100px;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      background: radial-gradient(circle at top, #1a0033, #000000 60%, #000);
+      overflow-x: hidden;
+    }
 
-/* BIO BOX */
-.box{
-  width:90%;
-  max-width:520px;
-  margin:80px auto 30px;
-  padding:25px;
-  border-radius:20px;
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.1);
-}
+    /* background glow */
+    body::before, body::after {
+      content: "";
+      position: fixed;
+      filter: blur(120px);
+      z-index: -1;
+    }
 
-h1{margin-bottom:10px}
+    body::before {
+      width: 500px;
+      height: 500px;
+      background: rgba(0,255,255,0.08);
+      top: -100px;
+      left: -100px;
+    }
 
-/* SLIDER */
-.slider-wrapper{
-  position:relative;
-  width:92%;
-  max-width:650px;
-  margin:30px auto 60px;
-  overflow:hidden;
-  border-radius:16px;
-  background:rgba(0,0,0,0.5);
-  border:1px solid rgba(255,255,255,0.1);
-}
+    body::after {
+      width: 400px;
+      height: 400px;
+      background: rgba(255,0,100,0.08);
+      bottom: -100px;
+      right: -100px;
+    }
 
-/* track */
-.slider-track{
-  display:flex;
-  transition:transform 0.4s ease;
-}
+    .box {
+      width: 90%;
+      max-width: 520px;
+      margin: 90px auto 20px;
+      padding: 30px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 0 40px rgba(0,0,0,0.7);
+    }
 
-/* card link */
-.track{
-  min-width:140px;
-  margin:15px;
-  text-decoration:none;
-  color:white;
-}
+    h1 { font-size: 26px; }
 
-.track img{
-  width:110px;
-  height:110px;
-  border-radius:14px;
-  object-fit:cover;
-}
+    .bio {
+      font-size: 13px;
+      line-height: 1.9;
+      opacity: 0.9;
+    }
 
-.track span{
-  display:block;
-  margin-top:6px;
-  font-size:12px;
-}
+    /* MENU */
+    .menu {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      font-size: 30px;
+      cursor: pointer;
+      color: #00ffff;
+      z-index: 9999;
+    }
 
-/* buttons */
-.btn{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,0.6);
-  border:none;
-  color:white;
-  font-size:22px;
-  padding:8px 12px;
-  cursor:pointer;
-}
+    .menu-box {
+      display: none;
+      position: fixed;
+      top: 55px;
+      left: 15px;
+      background: rgba(0,0,0,0.9);
+      padding: 12px;
+      border-radius: 12px;
+      z-index: 9999;
+    }
 
-#prev{left:0}
-#next{right:0}
+    .menu-box a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+    }
 
-</style>
+    .menu-box a:hover { color: #00ffff; }
+
+    /* SLIDER */
+    .music-slider {
+      width: 92%;
+      max-width: 650px;
+      margin: 30px auto 50px;
+
+      display: flex;
+      gap: 12px;
+
+      padding: 12px;
+      overflow-x: auto;
+
+      background: rgba(0,0,0,0.5);
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+
+      scroll-snap-type: x mandatory;
+    }
+
+    .music-slider::-webkit-scrollbar { display: none; }
+
+    .track {
+      flex: 0 0 auto;
+      width: 120px;
+      text-decoration: none;
+      color: white;
+      scroll-snap-align: center;
+    }
+
+    .track img {
+      width: 100px;
+      height: 100px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .track span {
+      display: block;
+      margin-top: 6px;
+      font-size: 11px;
+      opacity: 0.85;
+    }
+
+    .track:hover span {
+      color: #00ffff;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- BIO -->
-<div class="box">
-  <h1>مسیحا فوران</h1>
-  <p>
-    هنرمند مستقل سبک Hip-Hop / Rap / R&B<br>
-    تنظیم، میکس و مسترینگ شخصی<br>
-    فضای دارک و احساسی
-  </p>
-</div>
+  <div class="menu" onclick="toggleMenu()">☰</div>
 
-<!-- SLIDER -->
-<div class="slider-wrapper">
+  <div id="menuBox" class="menu-box">
+    <a href="index.html">بیوگرافی فوران</a>
+    <a href="track1.html">Rafti Ke Nabashi</a>
+    <a href="track2.html">Infidel Coward</a>
+  </div>
 
-  <button class="btn" id="prev">‹</button>
+  <!-- BIO -->
+  <div class="box">
+    <h1>مسیحا فوران</h1>
 
-  <div class="slider-track" id="track">
+    <p class="bio">
+      مسیحا فوران یک هنرمند مستقل در سبک آراندبی و رپ است<br><br>
+      او تنظیم، میکس و مسترینگ موزیک‌هایش را خودش انجام می‌دهد<br><br>
+      با فضای دارک و ملودی‌های خاص، سعی می‌کند موزیک‌هایی بسازد که احساس واقعی منتقل کنند<br><br>
+      🎧 Hip-Hop / Rap / R&B<br>
+      📍 ایران
+    </p>
+  </div>
+
+  <!-- SLIDER (FULL CLICKABLE) -->
+  <div class="music-slider">
 
     <a class="track" href="track1.html">
-      <img src="CoverMusic.png">
+      <img src="CoverMusic.png" alt="Rafti Ke Nabashi">
       <span>Rafti Ke Nabashi</span>
     </a>
 
     <a class="track" href="track2.html">
-      <img src="CoverInfidelCoward.jpg">
+      <img src="CoverInfidelCoward.jpg" alt="Infidel Coward">
       <span>Infidel Coward</span>
     </a>
 
   </div>
 
-  <button class="btn" id="next">›</button>
-
-</div>
-
-<script>
-let index = 0;
-const track = document.getElementById("track");
-const items = document.querySelectorAll(".track");
-
-function update(){
-  const width = items[0].offsetWidth + 30;
-  track.style.transform = `translateX(-${index * width}px)`;
-}
-
-document.getElementById("next").onclick = () => {
-  if(index < items.length - 1){
-    index++;
-    update();
-  }
-}
-
-document.getElementById("prev").onclick = () => {
-  if(index > 0){
-    index--;
-    update();
-  }
-}
-</script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menuBox");
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+  </script>
 
 </body>
 </html>
