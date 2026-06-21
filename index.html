@@ -72,7 +72,7 @@
       border: 1px solid rgba(255,255,255,0.12);
       box-shadow: 0 0 40px rgba(0,0,0,0.7);
       animation: fadeIn 1s ease;
-      margin: 100px auto 140px;
+      margin: 100px auto 80px; /* کمتر شد چون اسلایدر fixed نیست */
       transform: translateZ(0);
     }
 
@@ -138,25 +138,29 @@
       color: #00ffff;
     }
 
-    /* SLIDER */
+    /* SLIDER (NOW NORMAL IN PAGE) */
     .music-slider {
-      position: fixed;
-      bottom: 12px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 12px;
+      position: relative;   /* 🔥 مهم */
+      margin: 30px auto 40px;
       width: 92%;
       max-width: 650px;
+
+      display: flex;
+      gap: 12px;
+
       padding: 12px;
+
       overflow-x: auto;
       overflow-y: hidden;
-      background: rgba(0,0,0,0.7);
+
+      background: rgba(0,0,0,0.5);
       backdrop-filter: blur(14px);
+
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 16px;
+
       scroll-snap-type: x mandatory;
-      z-index: 9999;
+
       -webkit-overflow-scrolling: touch;
     }
 
