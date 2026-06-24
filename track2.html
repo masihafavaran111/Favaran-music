@@ -64,7 +64,6 @@
       text-decoration: none;
     }
 
-    /* MENU */
     .menu {
       position: fixed;
       top: 15px;
@@ -96,7 +95,6 @@
 
     .menu-box a:hover { color: #00ffff; }
 
-    /* SLIDER مثل بیوگرافی */
     .music-slider {
       position: relative;
       margin: 30px auto 20px;
@@ -151,6 +149,19 @@
     .track:hover span {
       color: #00ffff;
     }
+
+    /* Lyrics style (Spotify-like) */
+    .lyrics {
+      margin-top: 20px;
+      padding: 18px;
+      border-radius: 15px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.1);
+      text-align: right;
+      line-height: 2;
+      font-size: 14px;
+    }
   </style>
 </head>
 
@@ -165,12 +176,31 @@
   </div>
 
   <div class="box">
-<div class="lyrics">
 
-  <h2>Lyrics</h2>
+    <div class="header">
+      <div class="en">Masiha Favaran</div>
+      <div class="en">Infidel Coward</div>
+    </div>
 
-  <div>
-  <p>
+    <img src="CoverInfidelCoward.jpg" alt="cover">
+
+    <audio controls>
+      <source src="InfidelCoward.m4a" type="audio/mp4">
+    </audio>
+
+    <a class="download" href="InfidelCoward.m4a" download>
+      Download High Quality
+    </a>
+
+    <!-- LYRICS (FIXED PLACE) -->
+    <div class="lyrics">
+
+      <h2>Lyrics</h2>
+
+      <p>
+
+verse1:<br>
+        
 ببین یه راه اشتباه بری بازم کنارت می‌مونن<br>
 ببین بری بازم واست میشینن میخونن<br>
 برات مثل من،دوروز نباشی میمیرن<br>
@@ -194,12 +224,16 @@
 حالم بهتر بود حتا بودم توی برده های شرق<br>
 <br>
 
+Chores1:<br>
+        
 دیگه Call نکن به من کالو نده تکست‌و<br>
 گوشیم خاموشه نمیکنم حتا چک‌و<br>
 دیگه Call نکن به من کالو نده تکست‌و<br>
 گوشیم خاموشه نمیکنم حتا چک‌و<br>
 <br>
 
+Verse2:<br>
+        
 تو بدنم بیشتر الکله تا خون<br>
 سردرد منو کرده بدجوری داغون<br>
 انگار چند نفر بهم هی میزنن باتون<br>
@@ -209,28 +243,16 @@
 خودکشی چیه میمیرم شبا<br>
 تا این لامصب طلوع کنه خورشید<br>
 <br>
-
+        
+Chores2:<br>
+        
 دیگه Call نکن به من کالو نده تکست‌و<br>
 گوشیم خاموشه نمیکنم حتا چک‌و<br>
 دیگه Call نکن به من کالو نده تکست‌و<br>
 گوشیم خاموشه نمیکنم حتا چک‌و<br>
-  </p>
+      </p>
 
-</div>
-    <div class="header">
-      <div class="en">Masiha Favaran</div>
-      <div class="en">Infidel Coward</div>
     </div>
-
-    <img src="CoverInfidelCoward.jpg" alt="cover">
-
-    <audio controls>
-      <source src="InfidelCoward.m4a" type="audio/mp4">
-    </audio>
-
-    <a class="download" href="InfidelCoward.m4a" download>
-      Download High Quality
-    </a>
 
   </div>
 
