@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tracks | Masiha Favaran</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #1a0033, #000000 60%, #000);
+      color: white;
+      text-align: center;
+    }
+
+    /* ===== TOP MENU ===== */
+    .top-menu {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 35px;
+      padding: 12px 28px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.14);
+      z-index: 9999;
+    }
+
+    .top-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      opacity: 0.85;
+      transition: 0.2s;
+    }
+
+    .top-menu a:hover {
+      opacity: 1;
+      color: #00ffff;
+    }
+
+    /* ===== PAGE TITLE ===== */
+    h1 {
+      margin-top: 120px;
+      font-size: 50px;
+      background: linear-gradient(135deg, #ff3b7b, #7b3bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      color: #aaa;
+      margin-bottom: 40px;
+    }
+
+    /* ===== TRACK LIST ===== */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding-bottom: 80px;
+    }
+
+    .track {
+      width: 85%;
+      max-width: 500px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      transition: 0.2s;
+    }
+
+    .track:hover {
+      transform: scale(1.02);
+      border-color: #00ffff55;
+    }
+
+    .cover {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .info {
+      flex: 1;
+      text-align: left;
+    }
+
+    .title {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .btns a {
+      display: inline-block;
+      margin-right: 8px;
+      font-size: 12px;
+      text-decoration: none;
+      color: #00ffff;
+    }
+
+    .btns a:hover {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU -->
+  <div class="top-menu">
+    <a href="index.html">Home</a>
+    <a href="tracks.html" style="color:#00ffff;">Tracks</a>
+    <a href="album.html">Albums</a>
+  </div>
+
+  <!-- TITLE -->
+  <h1>TRACKS</h1>
+  <p>All music in one place</p>
+
+  <!-- TRACKS -->
+  <div class="container" id="tracks"></div>
+
+  <script>
+    // 👇 اینجا فقط ترک اضافه می‌کنی
+    const data = [
+      {
+        title: "Rafti Ke Nabashi",
+        cover: "CoverMusic.png",
+        file: "RaftiKeNabashi.mp3",
+        page: "track1.html"
+      },
+      {
+        title: "Infidel Coward",
+        cover: "CoverInfidelCoward.jpg",
+        file: "InfidelCoward.m4a",
+        page: "track2.html"
+      }
+    ];
+
+    const container = document.getElementById("tracks");
+
+    data.forEach(t => {
+      const div = document.createElement("div");
+      div.className = "track";
+
+      div.innerHTML = `
+        <img class="cover" src="${t.cover}">
+        <div class="info">
+          <div class="title">${t.title}</div>
+          <div class="btns">
+            <a href="${t.page}">▶ Play</a>
+            <a href="${t.file}" download>⬇ Download</a>
+          </div>
+        </div>
+      `;
+
+      container.appendChild(div);
+    });
+  </script>
+
+</body>
+  </html>
