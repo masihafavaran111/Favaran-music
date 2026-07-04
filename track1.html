@@ -26,10 +26,42 @@
       100% { background-position: 0% 50%; }
     }
 
+    /* ===== TOP NAV TABS ===== */
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px auto 40px;
+      background: rgba(255,255,255,0.06);
+      padding: 10px;
+      border-radius: 50px;
+      width: fit-content;
+      backdrop-filter: blur(12px);
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: #aaa;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 14px;
+      transition: 0.25s ease;
+    }
+
+    .top-nav a:hover {
+      color: #00ffff;
+    }
+
+    .top-nav a.active {
+      background: rgba(0,255,255,0.15);
+      color: #00ffff;
+    }
+
+    /* ===== MAIN BOX ===== */
     .box {
       width: 90%;
       max-width: 420px;
-      margin: 80px auto 20px;
+      margin: 20px auto;
       padding: 25px;
       border-radius: 20px;
       background: rgba(255,255,255,0.05);
@@ -67,38 +99,7 @@
       text-decoration: none;
     }
 
-    /* MENU */
-    .menu {
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      font-size: 28px;
-      cursor: pointer;
-      z-index: 9999;
-      color: #00ffff;
-    }
-
-    .menu-box {
-      display: none;
-      position: fixed;
-      top: 55px;
-      left: 15px;
-      background: rgba(0,0,0,0.8);
-      padding: 10px;
-      border-radius: 10px;
-      z-index: 9999;
-    }
-
-    .menu-box a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      padding: 8px;
-      font-size: 14px;
-    }
-
-    .menu-box a:hover { color: #00ffff; }
-
+    /* ===== LYRICS ===== */
     .lyrics {
       margin-top: 25px;
       padding: 20px;
@@ -117,17 +118,17 @@
       font-weight: bold;
       color: #ffd84d;
       font-size: 15px;
-      text-align: right;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="menu" onclick="toggleMenu()">☰</div>
-
-  <div id="menuBox" class="menu-box">
-    <a href="tracks.html">Tracklist</a>
+  <!-- TOP NAV -->
+  <div class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="tracks.html" class="active">Tracks</a>
+    <a href="albums.html">Albums</a>
   </div>
 
   <div class="box">
@@ -148,73 +149,49 @@
     </a>
 
     <div class="lyrics">
+      <h2>Lyrics</h2>
 
-      <div class="lyrics">
-        <h2>Lyrics</h2>
+      <span class="section">Verse 1</span>
+      ساعت ۳ صبح صدا فندک سیگار<br>
+      می‌شنومت صدای خنده‌ات میاد<br>
+      چپم میگیرم دادم از دست چیا<br>
+      ولی خاطرات مغزمو هرشب میگاد<br><br>
 
-        <p>
-          <span class="section">Verse 1</span>
-          ساعت ۳ صبح صدا فندک سیگار<br>
-          می‌شنومت صدای خنده‌ات میاد<br>
-          چپم میگیرم دادم از دست چیا<br>
-          ولی خاطرات مغزمو هرشب میگاد<br>
-          <br>
-          غروب شده داره باز آفتاب میره<br>
-          ریه هام شده مث آسفالت تیره<br>
-          مشخصه آدم بده داستان کیه<br>
-          جوری بدتو گفتم همه بات آشنان دیگه<br>
-          <br>
+      غروب شده داره باز آفتاب میره<br>
+      ریه هام شده مث آسفالت تیره<br>
+      مشخصه آدم بده داستان کیه<br>
+      جوری بدتو گفتم همه بات آشنان دیگه<br><br>
 
-          <span class="section">Chorus 1</span>
-          تو خودت رفتی که نباشی<br>
-          برا رسیدن بهم نکردی تلاشی<br>
-          تو کل مدت نزدم دستی بهت<br>
-          بگو الان شده بدنت براکی<br>
-          <br>
+      <span class="section">Chorus</span>
+      تو خودت رفتی که نباشی<br>
+      برا رسیدن بهم نکردی تلاشی<br>
+      تو کل مدت نزدم دستی بهت<br>
+      بگو الان شده بدنت براکی<br><br>
 
-          تو خودت رفتی که نباشی<br>
-          برا رسیدن بهم نکردی تلاشی<br>
-          تو کل مدت نزدم دستی بهت<br>
-          بگو الان شده بدنت براکی<br>
-          <br>
+      تو خودت رفتی که نباشی<br>
+      برا رسیدن بهم نکردی تلاشی<br>
+      تو کل مدت نزدم دستی بهت<br>
+      بگو الان شده بدنت براکی<br><br>
 
-          <span class="section">Verse 2</span>
-          لعنت به خودتو با اونکه هستی باهاشو<br>
-          بی دلیل دَکَم کردی پس میدی کارماشو<br>
-          ضایع‌اس، تقصیر خودت بودو کاراتو<br>
-          سَرم بره زیر گیوتین برنمیگردم باتو<br>
-          <br>
+      <span class="section">Verse 2</span>
+      لعنت به خودتو با اونکه هستی باهاشو<br>
+      بی دلیل دَکَم کردی پس میدی کارماشو<br>
+      ضایع‌اس، تقصیر خودت بودو کاراتو<br>
+      سَرم بره زیر گیوتین برنمیگردم باتو<br><br>
 
-          بهم گفتی که واست بودم الگو<br>
-          ولی چرا پس همه کارات فول بود<br>
-          شبا مستی با غریبه،منو رفته یادت<br>
-          اینجا موندمو سقف اتاقم پُر دود<br>
-          <br>
+      بهم گفتی که واست بودم الگو<br>
+      ولی چرا پس همه کارات فول بود<br>
+      شبا مستی با غریبه،منو رفته یادت<br>
+      اینجا موندمو سقف اتاقم پُر دود<br><br>
 
-          <span class="section">Chorus 2</span>
-          تو خودت رفتی که نباشی<br>
-          برا رسیدن بهم نکردی تلاشی<br>
-          تو کل مدت نزدم دستی بهت<br>
-          بگو الان شده بدنت براکی<br>
-          <br>
-
-          تو خودت رفتی که نباشی<br>
-          برا رسیدن بهم نکردی تلاشی<br>
-          تو کل مدت نزدم دستی بهت<br>
-          بگو الان شده بدنت براکی
-        </p>
-
-      </div>
-
+      <span class="section">Chorus</span>
+      تو خودت رفتی که نباشی<br>
+      برا رسیدن بهم نکردی تلاشی<br>
+      تو کل مدت نزدم دستی بهت<br>
+      بگو الان شده بدنت براکی
     </div>
-  </div>
 
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menuBox");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
-    }
-  </script>
+  </div>
 
 </body>
 </html>
