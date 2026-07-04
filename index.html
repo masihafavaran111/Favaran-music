@@ -8,9 +8,7 @@
   <title>مسیحا فوران | Masiha Favaran</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -73,7 +71,6 @@
       font-size: 14px;
       opacity: 0.85;
       transition: 0.25s ease;
-      cursor: pointer;
     }
 
     .top-menu a:hover {
@@ -84,7 +81,6 @@
     /* dropdown */
     .dropdown {
       position: relative;
-      display: inline-block;
     }
 
     .dropbtn {
@@ -92,8 +88,6 @@
       text-decoration: none;
       font-size: 14px;
       opacity: 0.85;
-      cursor: pointer;
-      transition: 0.25s ease;
     }
 
     .dropbtn:hover {
@@ -147,9 +141,7 @@
       box-shadow: 0 0 40px rgba(0,0,0,0.7);
     }
 
-    h1 {
-      font-size: 26px;
-    }
+    h1 { font-size: 26px; }
 
     .bio {
       font-size: 13px;
@@ -173,13 +165,18 @@
 
 <body>
 
-  <!-- NAV (FIXED) -->
+  <!-- NAV FIXED -->
   <div class="top-menu">
 
     <a href="index.html">Home</a>
 
     <div class="dropdown">
       <a class="dropbtn" href="tracks.html">Tracks</a>
+      <div class="dropdown-content">
+        <a href="tracks.html">Tracks list</a>
+      </div>
+    </div>
+
     <a href="album.html">Albums</a>
 
   </div>
@@ -199,4 +196,4 @@
   </div>
 
 </body>
-      </html>
+</html>
