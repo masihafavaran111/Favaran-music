@@ -42,7 +42,7 @@
       right: -100px;
     }
 
-    /* TOP MENU (دقیق مثل index) */
+    /* TOP MENU */
     .top-menu {
       position: fixed;
       top: 18px;
@@ -85,7 +85,6 @@
 
     .dropdown {
       position: relative;
-      display: inline-block;
     }
 
     .dropdown-content {
@@ -143,37 +142,31 @@
       margin-top: 10px;
       color: #aaa;
     }
-button,
-a {
-    -webkit-tap-highlight-color: transparent;
-      }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- MENU (دقیق مثل index) -->
-<div class="top-menu">
-  <a href="index.html">Home</a>
+  <!-- MENU -->
+  <div class="top-menu">
 
-  <div class="dropdown">
-    <button class="dropbtn">Tracks</button>
-
-    <div class="dropdown-content">
-      <a href="tracks.html">All Tracks</a>
-      <a href="album.html" style="color:#00ffff;">Albums</a>
-    </div>
-  </div>
-</div>
+    <a href="index.html">Home</a>
 
     <div class="dropdown">
-      <span class="dropbtn">Tracks</span>
+      <button class="dropbtn">Tracks</button>
+      <div class="dropdown-content">
+        <a href="tracks.html">All Tracks</a>
+        <a href="album.html">Albums</a>
+      </div>
+    </div>
 
-
-<div id="albums" class="tab" style="display:none;">
-  Albums Page Content
-  </div>
     <a href="album.html" style="color:#00ffff;">Albums</a>
+
   </div>
 
   <!-- CENTER -->
