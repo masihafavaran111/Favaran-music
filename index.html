@@ -8,7 +8,9 @@
   <title>مسیحا فوران | Masiha Favaran</title>
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -42,6 +44,7 @@
       right: -100px;
     }
 
+    /* ===== NAV ===== */
     .top-menu {
       position: fixed;
       top: 18px;
@@ -64,27 +67,38 @@
       align-items: center;
     }
 
-    .top-menu a,
-    .dropbtn {
+    .top-menu a {
       color: white;
       text-decoration: none;
       font-size: 14px;
       opacity: 0.85;
       transition: 0.25s ease;
       cursor: pointer;
-      background: none;
-      border: none;
     }
 
-    .top-menu a:hover,
-    .dropbtn:hover {
+    .top-menu a:hover {
       opacity: 1;
       color: #00ffff;
     }
 
+    /* dropdown */
     .dropdown {
       position: relative;
       display: inline-block;
+    }
+
+    .dropbtn {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      opacity: 0.85;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .dropbtn:hover {
+      opacity: 1;
+      color: #00ffff;
     }
 
     .dropdown-content {
@@ -120,6 +134,7 @@
       display: block;
     }
 
+    /* ===== BOX ===== */
     .box {
       width: 90%;
       max-width: 520px;
@@ -132,7 +147,9 @@
       box-shadow: 0 0 40px rgba(0,0,0,0.7);
     }
 
-    h1 { font-size: 26px; }
+    h1 {
+      font-size: 26px;
+    }
 
     .bio {
       font-size: 13px;
@@ -156,17 +173,17 @@
 
 <body>
 
+  <!-- NAV (FIXED) -->
   <div class="top-menu">
 
     <a href="index.html">Home</a>
 
     <div class="dropdown">
-      <span class="dropbtn">Tracks</span>
+      <a class="dropbtn" href="tracks.html">Tracks</a>
 
       <div class="dropdown-content">
         <a href="tracks.html">Tracks list</a>
       </div>
-
     </div>
 
     <a href="album.html">Albums</a>
@@ -188,4 +205,4 @@
   </div>
 
 </body>
-</html>
+      </html>
