@@ -42,7 +42,6 @@
       right: -100px;
     }
 
-    
     .top-menu {
       position: fixed;
       top: 18px;
@@ -83,7 +82,6 @@
       color: #00ffff;
     }
 
-    /* dropdown */
     .dropdown {
       position: relative;
       display: inline-block;
@@ -122,12 +120,6 @@
       display: block;
     }
 
-    /* Albums غیر فعال */
-    .disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
-    }
-
     .box {
       width: 90%;
       max-width: 520px;
@@ -148,53 +140,6 @@
       opacity: 0.9;
     }
 
-    .music-slider {
-      width: 92%;
-      max-width: 650px;
-      margin: 30px auto 50px;
-
-      display: flex;
-      gap: 12px;
-
-      padding: 12px;
-      overflow-x: auto;
-
-      background: rgba(0,0,0,0.5);
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.08);
-
-      scroll-snap-type: x mandatory;
-    }
-
-    .music-slider::-webkit-scrollbar { display: none; }
-
-    .track {
-      flex: 0 0 auto;
-      width: 120px;
-      text-decoration: none;
-      color: white;
-      scroll-snap-align: center;
-    }
-
-    .track img {
-      width: 100px;
-      height: 100px;
-      border-radius: 14px;
-      object-fit: cover;
-      border: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .track span {
-      display: block;
-      margin-top: 6px;
-      font-size: 11px;
-      opacity: 0.85;
-    }
-
-    .track:hover span {
-      color: #00ffff;
-    }
-
     @media(max-width:500px){
       .top-menu {
         gap: 20px;
@@ -206,37 +151,10 @@
         font-size: 12px;
       }
     }
-.top-menu {
-  position: fixed;
-  top: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 35px;
-
-  padding: 12px 28px;
-  border-radius: 999px;
-
-  background: rgba(255,255,255,0.07);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-
-  border: 1px solid rgba(255,255,255,0.14);
-  box-shadow: 0 0 30px rgba(0,0,0,0.6);
-
-  z-index: 9999;
-  align-items: center;
-
-
-  -webkit-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-      }
   </style>
 </head>
 
 <body>
-
 
   <div class="top-menu">
 
@@ -262,26 +180,11 @@
     <p class="bio">
       مسیحا فوران یک هنرمند مستقل در سبک آراندبی و رپ است<br><br>
       او تنظیم، میکس و مسترینگ موزیک‌هایش را خودش انجام می‌دهد<br><br>
-      .با فضای دارک و ملودی‌های خاص سعی می‌کند موزیک‌هایی بسازد که احساس واقعی منتقل کنند<br><br>
+      با فضای دارک و ملودی‌های خاص سعی می‌کند موزیک‌هایی بسازد که احساس واقعی منتقل کنند<br><br>
       🎧 Hip-Hop / Rap / R&B<br>
       📍 ایران <br> 
-      .سایت متعلق به فوران میباشد <br>
+      سایت متعلق به فوران میباشد <br>
     </p>
-  </div>
-
-  <!-- SLIDER -->
-  <div class="music-slider">
-
-    <a class="track" href="track1.html">
-      <img src="CoverMusic.png" alt="Rafti Ke Nabashi">
-      <span>Rafti Ke Nabashi</span>
-    </a>
-
-    <a class="track" href="track2.html">
-      <img src="CoverInfidelCoward.jpg" alt="Infidel Coward">
-      <span>Infidel Coward</span>
-    </a>
-
   </div>
 
 </body>
