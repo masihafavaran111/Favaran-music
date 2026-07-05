@@ -20,7 +20,15 @@
       background: radial-gradient(circle at top, #1a0033, #000000 60%, #000);
       overflow-x: hidden;
     }
+* {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
 
+a {
+  -webkit-tap-highlight-color: transparent;
+    }
     body::before, body::after {
       content: "";
       position: fixed;
