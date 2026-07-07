@@ -1,154 +1,144 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!DOCTYPE html>  <html lang="fa">  
+<head>  
+<link rel="icon" type="image/png" href="Coversiteman.png">  <meta property="og:type" content="website">  
+<meta property="og:title" content="Masiha Favaran">  
+<meta property="og:description" content="Favaran official page">  
+<meta property="og:image" content="https://masihafavaran111.github.io/MasihaFavaran/Coversiteman.png">  <meta name="twitter:card" content="summary_large_image">  
+<meta name="twitter:title" content="Masiha Favaran">  
+<meta name="twitter:description" content="Favaran official page">  
+<meta name="twitter:image" content="https://masihafavaran111.github.io/MasihaFavaran/Coversiteman.png">  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>    <meta name="description" content="مسیحا فوران، هنرمند مستقل در سبک Hip-Hop, Rap و R&B">  
+  <title>مسیحا فوران | Masiha Favaran</title>    <style>  
+    * {  
+      box-sizing: border-box;  
+    }  
+  
+    body {  
+      margin: 0;  
+      font-family: Arial, sans-serif;  
+      color: white;  
+      text-align: center;  
+      background: radial-gradient(circle at top, #1a0033, #000000 60%, #000);  
+      overflow-x: hidden;  
+    }  
+  
+    /* جلوگیری از Tap Search و انتخاب متن */  
+    * {  
+      -webkit-user-select: none;  
+      user-select: none;  
+      -webkit-touch-callout: none;  
+    }  
+  
+    a {  
+      -webkit-tap-highlight-color: transparent;  
+    }  
+  
+    body::before, body::after {  
+      content: "";  
+      position: fixed;  
+      filter: blur(120px);  
+      z-index: -1;  
+    }  
+  
+    body::before {  
+      width: 500px;  
+      height: 500px;  
+      background: rgba(0,255,255,0.08);  
+      top: -100px;  
+      left: -100px;  
+    }  
+  
+    body::after {  
+      width: 400px;  
+      height: 400px;  
+      background: rgba(255,0,100,0.08);  
+      bottom: -100px;  
+      right: -100px;  
+    }  
+  
+    /* ===== NAV ===== */  
+    .top-menu {  
+      position: fixed;  
+      top: 18px;  
+      left: 50%;  
+      transform: translateX(-50%);  
+      display: flex;  
+      align-items: center;  
+      gap: 35px;  
+  
+      padding: 12px 28px;  
+      border-radius: 999px;  
+  
+      background: rgba(255,255,255,0.07);  
+      backdrop-filter: blur(18px);  
+      -webkit-backdrop-filter: blur(18px);  
+  
+      border: 1px solid rgba(255,255,255,0.14);  
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);  
+  
+      z-index: 9999;  
+    }  
+  
+    .top-menu a {  
+      color: white;  
+      text-decoration: none;  
+      font-size: 14px;  
+      opacity: 0.85;  
+      transition: 0.25s ease;  
+    }  
+  
+    .top-menu a:hover {  
+      opacity: 1;  
+      color: #00ffff;  
+    }  
+  
+    /* BOX */  
+    .box {  
+      width: 90%;  
+      max-width: 520px;  
+      margin: 110px auto 20px;  
+      padding: 30px;  
+      border-radius: 22px;  
+      background: rgba(255,255,255,0.05);  
+      backdrop-filter: blur(18px);  
+      border: 1px solid rgba(255,255,255,0.12);  
+      box-shadow: 0 0 40px rgba(0,0,0,0.7);  
+    }  
+  
+    h1 {  
+      font-size: 26px;  
+    }  
+  
+    .bio {  
+      font-size: 13px;  
+      line-height: 1.9;  
+      opacity: 0.9;  
+    }  
+  
+    @media(max-width:500px){  
+      .top-menu {  
+        gap: 20px;  
+        padding: 10px 18px;  
+      }  
+  
+      .top-menu a {  
+        font-size: 12px;  
+      }  
+    }  
+  </style>  </head>  <body>    <!-- NAV -->    <div class="top-menu">  
+    <a href="index.html">Home</a>  
+    <a href="tracks.html">Tracklist</a>  
+    <a href="album.html">Albums</a>  
+  </div>    <!-- CONTENT -->    <div class="box">  
+    <h1>مسیحا فوران</h1>  <p class="bio">  
+  مسیحا فوران یک هنرمند مستقل در سبک آراندبی و رپ است<br><br>  
+  او تنظیم، میکس و مسترینگ موزیک‌هایش را خودش انجام می‌دهد<br><br>  
+  با فضای دارک و ملودی‌های خاص سعی می‌کند موزیک‌هایی بسازد که احساس واقعی منتقل کنند<br><br>  
+  🎧 Hip-Hop / Rap / R&B<br>  
+  📍 ایران <br>   
+  سایت متعلق به فوران میباشد <br>  
+</p>
 
-  <meta name="description" content="مسیحا فوران، هنرمند مستقل در سبک Hip-Hop, Rap و R&B">
-  <title>مسیحا فوران | Masiha Favaran</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
-      background: radial-gradient(circle at top, #1a0033, #000000 60%, #000);
-      overflow-x: hidden;
-    }
-
-    /* جلوگیری از Tap Search و انتخاب متن */
-    * {
-      -webkit-user-select: none;
-      user-select: none;
-      -webkit-touch-callout: none;
-    }
-
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    body::before, body::after {
-      content: "";
-      position: fixed;
-      filter: blur(120px);
-      z-index: -1;
-    }
-
-    body::before {
-      width: 500px;
-      height: 500px;
-      background: rgba(0,255,255,0.08);
-      top: -100px;
-      left: -100px;
-    }
-
-    body::after {
-      width: 400px;
-      height: 400px;
-      background: rgba(255,0,100,0.08);
-      bottom: -100px;
-      right: -100px;
-    }
-
-    /* ===== NAV ===== */
-    .top-menu {
-      position: fixed;
-      top: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      align-items: center;
-      gap: 35px;
-
-      padding: 12px 28px;
-      border-radius: 999px;
-
-      background: rgba(255,255,255,0.07);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-
-      border: 1px solid rgba(255,255,255,0.14);
-      box-shadow: 0 0 30px rgba(0,0,0,0.6);
-
-      z-index: 9999;
-    }
-
-    .top-menu a {
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-      opacity: 0.85;
-      transition: 0.25s ease;
-    }
-
-    .top-menu a:hover {
-      opacity: 1;
-      color: #00ffff;
-    }
-
-    /* BOX */
-    .box {
-      width: 90%;
-      max-width: 520px;
-      margin: 110px auto 20px;
-      padding: 30px;
-      border-radius: 22px;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(18px);
-      border: 1px solid rgba(255,255,255,0.12);
-      box-shadow: 0 0 40px rgba(0,0,0,0.7);
-    }
-
-    h1 {
-      font-size: 26px;
-    }
-
-    .bio {
-      font-size: 13px;
-      line-height: 1.9;
-      opacity: 0.9;
-    }
-
-    @media(max-width:500px){
-      .top-menu {
-        gap: 20px;
-        padding: 10px 18px;
-      }
-
-      .top-menu a {
-        font-size: 12px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- NAV -->
-  <div class="top-menu">
-    <a href="index.html">Home</a>
-    <a href="tracks.html">Tracklist</a>
-    <a href="album.html">Albums</a>
-  </div>
-
-  <!-- CONTENT -->
-  <div class="box">
-    <h1>مسیحا فوران</h1>
-
-    <p class="bio">
-      مسیحا فوران یک هنرمند مستقل در سبک آراندبی و رپ است<br><br>
-      او تنظیم، میکس و مسترینگ موزیک‌هایش را خودش انجام می‌دهد<br><br>
-      با فضای دارک و ملودی‌های خاص سعی می‌کند موزیک‌هایی بسازد که احساس واقعی منتقل کنند<br><br>
-      🎧 Hip-Hop / Rap / R&B<br>
-      📍 ایران <br> 
-      سایت متعلق به فوران میباشد <br>
-    </p>
-  </div>
-
-</body>
+  </div>  </body>  
 </html>
