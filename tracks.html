@@ -142,19 +142,19 @@
         title: "Rafti Ke Nabashi",
         cover: "CoverMusic.png",
         file: "RaftiKeNabashi.mp3",
-        page: "track1.html"
+        page: "track1.html",
       },
       {
         title: "Infidel Coward",
         cover: "CoverInfidelCoward.jpg",
         file: "InfidelCoward.m4a",
-        page: "track2.html"
+        page: "track2.html",
       }
       {
         title: "Foroopashi",
         cover: "CoverForoopashi.png",
         file: "Foroopashi.mp3",
-        page: "Foroopashi.mp3"
+        page: "Foroopashi.html",
     }
     ];
 
@@ -169,7 +169,12 @@
         <div class="info">
           <div class="title">${t.title}</div>
           <div class="btns">
-            <a href="${t.file}" .برای پخش آنلاین و دانلود با کیفیت کلیک کنید Download</a>
+          <div class="title">
+    <a href="${t.page}">${t.title}</a>
+</div>
+<a href="${t.file}" download>
+  برای دانلود و پخش آنلاین کلیک کنید
+</a>
           </div>
         </div>
       `;
