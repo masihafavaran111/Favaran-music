@@ -105,6 +105,15 @@
       margin-bottom: 5px;
     }
 
+    .title a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .title a:hover {
+      color: #00ffff;
+    }
+
     .btns a {
       display: inline-block;
       margin-right: 8px;
@@ -136,26 +145,25 @@
   <div class="container" id="tracks"></div>
 
   <script>
-    // 👇 اینجا فقط ترک اضافه می‌کنی
     const data = [
       {
         title: "Rafti Ke Nabashi",
         cover: "CoverMusic.png",
         file: "RaftiKeNabashi.mp3",
-        page: "track1.html",
+        page: "track1.html"
       },
       {
         title: "Infidel Coward",
         cover: "CoverInfidelCoward.jpg",
         file: "InfidelCoward.m4a",
-        page: "track2.html",
-      }
+        page: "track2.html"
+      },
       {
         title: "Foroopashi",
         cover: "CoverForoopashi.png",
         file: "Foroopashi.mp3",
-        page: "Foroopashi.html",
-    }
+        page: "Foroopashi.html"
+      }
     ];
 
     const container = document.getElementById("tracks");
@@ -165,16 +173,15 @@
       div.className = "track";
 
       div.innerHTML = `
-        <img class="cover" src="${t.cover}">
+        <img class="cover" src="${t.cover}" alt="${t.title}">
         <div class="info">
-          <div class="title">${t.title}</div>
-          <div class="btns">
           <div class="title">
-    <a href="${t.page}">${t.title}</a>
-</div>
-<a href="${t.file}" download>
-  برای دانلود و پخش آنلاین کلیک کنید
-</a>
+            <a href="${t.page}">${t.title}</a>
+          </div>
+          <div class="btns">
+            <a href="${t.file}" download>
+              برای دانلود و پخش آنلاین کلیک کنید
+            </a>
           </div>
         </div>
       `;
@@ -184,4 +191,4 @@
   </script>
 
 </body>
-  </html>
+</html>
