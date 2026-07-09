@@ -269,10 +269,6 @@ async function addView(){
   
 }  
   
-  
-  
-addView();  
-  
   async function showViews(){
 
   const { data, error } = await supabase
@@ -290,8 +286,10 @@ addView();
   document.getElementById("viewCount").innerHTML =
     "بازدید: " + data.views;
 }
-
-showViews();
+(async () => {
+  await addView();
+  await showViews();
+})();
 </script>
 </body> 
 </html>  
