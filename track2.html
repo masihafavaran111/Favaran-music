@@ -133,8 +133,16 @@ margin:15px 0 5px;
   
 }  
   
-  
-</style>  </head>  <body>  <div class="top-nav">  <a href="index.html">Home</a>
+  #viewCount {
+  margin: 18px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffd84d;
+  }
+</style>  
+</head> 
+  <body>  
+  <div class="top-nav">  <a href="index.html">Home</a>
 <a href="tracks.html" class="active">Tracks</a>
 <a href="albums.html">Albums</a>
 
@@ -142,8 +150,13 @@ margin:15px 0 5px;
 <div>InfidelCoward</div>  </div>  <img src="CoverInfidelCoward.jpg">  <audio controls>  <source src="InfidelCoward.m4a" type="audio/mp4">  </audio>  <a class="download" href="InfidelCoward.m4a" download>  
 Download High Quality  
 </a>  
-<div class="lyrics">  <h2>Lyrics</h2>  <p>  <span class="section">Verse 1</span>
-
+  <div id="viewCount">
+  بازدید: در حال بارگذاری...
+  </div>
+<div class="lyrics">  
+  <h2>Lyrics</h2> 
+  <p> 
+    <span class="section">Verse 1</span>
 ببین یه راه اشتباه بری بازم کنارت می‌مونن<br>
 ببین بری بازم واست میشینن میخونن<br>
 برات مثل من، دوروز نباشی میمیرن<br>
@@ -260,7 +273,25 @@ async function addView(){
   
 addView();  
   
-  
+  async function showViews(){
+
+  const { data, error } = await supabase
+    .from("tracks")
+    .select("views")
+    .eq("id",1)
+    .single();
+
+  if(error){
+    console.log("VIEW ERROR:", error);
+    return;
+  }
+
+  document.getElementById("viewCount").innerHTML =
+    "بازدید: " + data.views;
+
+}
+
+showViews();
 </script>
 </body> 
 </html>  
