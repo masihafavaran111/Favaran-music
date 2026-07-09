@@ -280,15 +280,15 @@ addView();
     .select("views")
     .eq("id",1)
     .single();
-
-  if(error){
-    console.log("VIEW ERROR:", error);
-    return;
+    
+    if(error){
+  console.log("VIEW ERROR:", error);
+  document.getElementById("viewCount").innerHTML = "خطا در دریافت بازدید";
+  return;
   }
 
   document.getElementById("viewCount").innerHTML =
     "بازدید: " + data.views;
-
 }
 
 showViews();
