@@ -1,257 +1,266 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>InfidelCoward | مسیحا فوران </title>
+<!DOCTYPE html>  <html lang="fa">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>InfidelCoward | مسیحا فوران</title>  <style>  
+  
+* {  
+  box-sizing: border-box;  
+}  
+  
+body {  
+  margin:0;  
+  font-family:Arial,sans-serif;  
+  color:white;  
+  text-align:center;  
+  background:linear-gradient(-45deg,#0f0f0f,#1a0033,#000,#001a33);  
+  background-size:400% 400%;  
+  animation:bg 10s ease infinite;  
+  padding-bottom:40px;  
+}  
+  
+@keyframes bg {  
+0% {background-position:0% 50%}  
+50% {background-position:100% 50%}  
+100% {background-position:0% 50%}  
+}  
+  
+  
+.top-nav {  
+  
+display:flex;  
+justify-content:center;  
+gap:10px;  
+margin:20px auto 40px;  
+background:#ffffff10;  
+padding:10px;  
+border-radius:50px;  
+width:max-content;  
+  
+}  
+  
+  
+.top-nav a {  
+  
+color:#aaa;  
+text-decoration:none;  
+padding:8px 18px;  
+border-radius:30px;  
+  
+}  
+  
+  
+.top-nav .active {  
+  
+color:#00ffff;  
+background:#00ffff20;  
+  
+}  
+  
+  
+  
+.box {  
+  
+width:90%;  
+max-width:420px;  
+margin:auto;  
+padding:25px;  
+border-radius:20px;  
+background:#ffffff10;  
+backdrop-filter:blur(12px);  
+border:1px solid #ffffff20;  
+  
+}  
+  
+  
+  
+.header {  
+  
+display:flex;  
+justify-content:space-between;  
+margin-bottom:15px;  
+  
+}  
+  
+  
+img {  
+  
+width:100%;  
+border-radius:15px;  
+  
+}  
+  
+  
+audio {  
+  
+width:100%;  
+margin-top:15px;  
+  
+}  
+  
+  
+.download {  
+  
+display:inline-block;  
+margin-top:15px;  
+padding:12px 18px;  
+border-radius:10px;  
+background:#00ffff;  
+color:black;  
+text-decoration:none;  
+font-weight:bold;  
+  
+}  
+  
+  
+.lyrics {  
+  
+margin-top:25px;  
+padding:20px;  
+border-radius:15px;  
+background:#ffffff10;  
+line-height:2;  
+text-align:right;  
+  
+}  
+  
+  
+.section {  
+  
+display:block;  
+color:#ffd84d;  
+font-weight:bold;  
+margin:15px 0 5px;  
+  
+}  
+  
+  
+</style>  </head>  <body>  <div class="top-nav">  <a href="index.html">Home</a>
+<a href="tracks.html" class="active">Tracks</a>
+<a href="albums.html">Albums</a>
 
-  <style>
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
-      background: linear-gradient(-45deg, #0f0f0f, #1a0033, #000000, #001a33);
-      background-size: 400% 400%;
-      animation: bg 10s ease infinite;
-      overflow-x: hidden;
-      padding-bottom: 40px;
-    }
-
-    @keyframes bg {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* ===== TOP NAV TABS ===== */
-    .top-nav {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 20px auto 40px;
-      background: rgba(255,255,255,0.06);
-      padding: 10px;
-      border-radius: 50px;
-      width: fit-content;
-      backdrop-filter: blur(12px);
-    }
-
-    .top-nav a {
-      text-decoration: none;
-      color: #aaa;
-      padding: 8px 18px;
-      border-radius: 30px;
-      font-size: 14px;
-      transition: 0.25s ease;
-    }
-
-    .top-nav a:hover {
-      color: #00ffff;
-    }
-
-    .top-nav a.active {
-      background: rgba(0,255,255,0.15);
-      color: #00ffff;
-    }
-
-    /* ===== MAIN BOX ===== */
-    .box {
-      width: 90%;
-      max-width: 420px;
-      margin: 20px auto;
-      padding: 25px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.1);
-      box-shadow: 0 0 25px rgba(0,0,0,0.6);
-    }
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-
-    .en { font-size: 12px; opacity: 0.7; }
-    .fa { font-size: 14px; font-weight: bold; }
-
-    img {
-      width: 100%;
-      border-radius: 15px;
-      margin-bottom: 15px;
-    }
-
-    audio { width: 100%; }
-
-    .download {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 18px;
-      border-radius: 10px;
-      background: #00ffff;
-      color: black;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    /* ===== LYRICS ===== */
-    .lyrics {
-      margin-top: 25px;
-      padding: 20px;
-      border-radius: 15px;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.1);
-      line-height: 2;
-      font-size: 14px;
-      text-align: right;
-    }
-
-    .section {
-      display: block;
-      margin: 12px 0 6px;
-      font-weight: bold;
-      color: #ffd84d;
-      font-size: 15px;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- TOP NAV -->
-  <div class="top-nav">
-    <a href="index.html">Home</a>
-    <a href="tracks.html" class="active">Tracks</a>
-    <a href="albums.html">Albums</a>
-  </div>
-
-  <div class="box">
-
-    <div class="header">
-      <div class="en">Masiha Favaran</div>
-      <div class="fa">InfidelCoward</div>
-    </div>
-
-    <img src="CoverInfidelCoward.jpg" alt="cover">
-
-    <audio controls>
-      <source src="InfidelCoward.m4a" type="audio/mpeg">
-    </audio>
-
-    <a class="download" href="InfidelCoward.m4a" download>
-      Download High Quality
-    </a>
-
-<!-- 🔥 LYRICS -->
-    <div class="lyrics">
-
-      <h2>Lyrics</h2>
-
-      <p>
-
-<span class="section">Verse 1</span>
+</div>  <div class="box">  <div class="header">  <div>Masiha Favaran</div>  
+<div>InfidelCoward</div>  </div>  <img src="CoverInfidelCoward.jpg">  <audio controls>  <source src="InfidelCoward.m4a" type="audio/mp4">  </audio>  <a class="download" href="InfidelCoward.m4a" download>  
+Download High Quality  
+</a>  
+<div class="lyrics">  <h2>Lyrics</h2>  <p>  <span class="section">Verse 1</span>
 
 ببین یه راه اشتباه بری بازم کنارت می‌مونن<br>
 ببین بری بازم واست میشینن میخونن<br>
-برات مثل من،دوروز نباشی میمیرن<br>
-یا که مهم نی براشون،بچپشون میگیرن<br>
+برات مثل من، دوروز نباشی میمیرن<br>
+یا که مهم نی براشون، بچپشون میگیرن<br>
 <br>
 
-گفتی بدون تو میمیرم،اره دارم می‌بینم<br>
-یه گوشه میشینم،اشکمو میریزم<br>
+گفتی بدون تو میمیرم، اره دارم می‌بینم<br>
+یه گوشه میشینم، اشکمو میریزم<br>
 خدام بودی میپرستیدمت الان یه کافر بی دینم<br>
 <br>
 
 نمیدونم چجوری میگذرونم شبمو<br>
 تک درختم بودی بعدش سوزوندنم جنگلو<br>
-ول کردی دستمو،همو یهو رفتنو<br>
+ول کردی دستمو، همو یهو رفتنو<br>
 تورو از دست دادم به اضافه‌ی قلبمو<br>
 <br>
 
-برو به همه بگو بگا رفت قهرمان من<br>
-میخام اینو بگم بالا میره ضربان قلب<br>
-منو دیگه جمع میبندن با نعشه های شب<br>
-حالم بهتر بود حتا بودم توی برده های شرق<br>
-<br>
-
-<span class="section">Chorus 1</span>
-
-دیگه کال نکن به من نده تکست‌و<br>
-گوشیم خاموشه نمیکنم حتا چک‌و<br>
-دیگه کال نکن به من نده تکست‌و<br>
-گوشیم خاموشه نمیکنم حتا چک‌و<br>
-<br>
-
-<span class="section">Verse 2</span>
-
-تو بدنم بیشتر الکله تا خون<br>
-سردرد منو کرده بدجوری داغون<br>
-انگار چند نفر بهم هی میزنن باتون<br>
-با تیغ نشد تلاش بعدیمه ساطور<br>
-رفیقات گلوله‌ان،تو یه کلتی<br>
-تیر از خودی بود تاثیری نداره مورفین<br>
-خودکشی چیه میمیرم شبا<br>
-تا این لامصب طلوع کنه خورشید<br>
-<br>
-
-<span class="section">Chorus 2</span>
+<span class="section">Chorus</span>
 
 دیگه کال نکن به من نده تکست‌و<br>
 گوشیم خاموشه نمیکنم حتا چک‌و<br>
 دیگه کال نکن به من نده تکست‌و<br>
 گوشیم خاموشه نمیکنم حتا چک‌و<br>
 
-      </p>
-
-                             </div>
-
-  </div>
-
-async function addView() {
-
-  // جلوگیری از ثبت چندباره روی یک مرورگر
-  if (localStorage.getItem("InfidelCoward_viewed")) {
-    console.log("Already counted");
-    return;
-  }
-
-  const { data, error } = await supabase
-    .from("tracks")
-    .select("views")
-    .eq("id", 1)
-    .single();
-
-  if (error) {
-    console.log("READ ERROR:", error);
-    return;
-  }
-
-  const { error: updateError } = await supabase
-    .from("tracks")
-    .update({
-      views: data.views + 2
-    })
-    .eq("id", 1);
-
-  if (updateError) {
-    console.log("UPDATE ERROR:", updateError);
-    return;
-  }
-
-  localStorage.setItem("InfidelCoward_viewed", "true");
-
-  console.log("VIEW +3");
-}
-
-addView();
-
+</p>  </div>  </div>  <!-- SUPABASE VIEW COUNTER -->  <script type="module">  
+  
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";  
+  
+  
+const supabase = createClient(  
+  
+  "https://mzavzvvyowlvechemkdo.supabase.co",  
+  
+  "sb_publishable_HgJ3Y88QZRXOT976GJrjRg_XlPpUdg-"  
+  
+);  
+  
+  
+  
+async function addView(){  
+  
+  
+  if(localStorage.getItem("InfidelCoward_viewed")){  
+  
+    console.log("Already counted");  
+  
+    return;  
+  
+  }  
+  
+  
+  
+  const {data,error}=await supabase  
+  
+  .from("tracks")  
+  
+  .select("views")  
+  
+  .eq("id",1)  
+  
+  .single();  
+  
+  
+  
+  if(error){  
+  
+    console.log("READ ERROR:",error);  
+  
+    return;  
+  
+  }  
+  
+  
+  
+  const {error:updateError}=await supabase  
+  
+  .from("tracks")  
+  
+  .update({  
+  
+    views:data.views + 1  
+  
+  })  
+  
+  .eq("id",1);  
+  
+  
+  
+  if(updateError){  
+  
+    console.log("UPDATE ERROR:",updateError);  
+  
+    return;  
+  
+  }  
+  
+  
+  
+  localStorage.setItem(  
+  
+    "InfidelCoward_viewed",  
+  
+    "true"  
+  
+  );  
+  
+  
+  console.log("VIEW +1");  
+  
+  
+}  
+  
+  
+  
+addView();  
+  
+  
 </script>
-</script>
-</body>
-</html>
+</body> 
+</html>  
