@@ -212,13 +212,53 @@
                              </div>
 
   </div>
-<script type="module">  
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";  
-  
-const supabase = createClient(  
-  "https://mzavzvvyowlvechemkdo.supabase.co",  
-  "sb_publishable_HgJ3Y88QZRXOT976GJrjRg_XlPpUdg-"  
-);  
+<script type="module">
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+const supabase = createClient(
+  "https://mzavzvvyowlvechemkdo.supabase.co",
+  "sb_publishable_HgJ3Y88QZRXOT976GJrjRg_XlPpUdg-"
+);
+
+async function addView() {
+
+  // جلوگیری از ثبت چندباره روی یک مرورگر
+  if (localStorage.getItem("InfidelCoward_viewed")) {
+    console.log("Already counted");
+    return;
+  }
+
+  const { data, error } = await supabase
+    .from("tracks")
+    .select("views")
+    .eq("id", 1)
+    .single();
+
+  if (error) {
+    console.log("READ ERROR:", error);
+    return;
+  }
+
+  const { error: updateError } = await supabase
+    .from("tracks")
+    .update({
+      views: data.views + 2
+    })
+    .eq("id", 1);
+
+  if (updateError) {
+    console.log("UPDATE ERROR:", updateError);
+    return;
+  }
+
+  localStorage.setItem("InfidelCoward_viewed", "true");
+
+  console.log("VIEW +3");
+}
+
+addView();
+
+</script>
 </script>
 </body>
 </html>
