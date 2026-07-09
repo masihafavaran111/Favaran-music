@@ -1,197 +1,261 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rafti Ke Nabashi</title>
+<!DOCTYPE html>  <html lang="fa">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+  <title>Rafti Ke Nabashi | مسیحا فوران</title>    <style>  
+* {  
+  box-sizing: border-box;  
+}  
+  
+body {  
+  margin:0;  
+  font-family:Arial,sans-serif;  
+  color:white;  
+  text-align:center;  
+  background:linear-gradient(-45deg,#0f0f0f,#1a0033,#000,#001a33);  
+  background-size:400% 400%;  
+  animation:bg 10s ease infinite;  
+  padding-bottom:40px;  
+}  
+  
+@keyframes bg {  
+0% {background-position:0% 50%}  
+50% {background-position:100% 50%}  
+100% {background-position:0% 50%}  
+}  
+  
+.top-nav {  
+  
+display:flex;  
+justify-content:center;  
+gap:10px;  
+margin:20px auto 40px;  
+background:#ffffff10;  
+padding:10px;  
+border-radius:50px;  
+width:max-content;  
+  
+}  
+  
+.top-nav a {  
+  
+color:#aaa;  
+text-decoration:none;  
+padding:8px 18px;  
+border-radius:30px;  
+  
+}  
+  
+.top-nav .active {  
+  
+color:#00ffff;  
+background:#00ffff20;  
+  
+}  
+  
+.box {  
+  
+width:90%;  
+max-width:420px;  
+margin:auto;  
+padding:25px;  
+border-radius:20px;  
+background:#ffffff10;  
+backdrop-filter:blur(12px);  
+border:1px solid #ffffff20;  
+  
+}  
+  
+.header {  
+  
+display:flex;  
+justify-content:space-between;  
+margin-bottom:15px;  
+  
+}  
+  
+img {  
+  
+width:100%;  
+border-radius:15px;  
+  
+}  
+  
+audio {  
+  
+width:100%;  
+margin-top:15px;  
+  
+}  
+  
+.download {  
+  
+display:inline-block;  
+margin-top:15px;  
+padding:12px 18px;  
+border-radius:10px;  
+background:#00ffff;  
+color:black;  
+text-decoration:none;  
+font-weight:bold;  
+  
+}  
+  
+.lyrics {  
+  
+margin-top:25px;  
+padding:20px;  
+border-radius:15px;  
+background:#ffffff10;  
+line-height:2;  
+text-align:right;  
+  
+}  
+  
+.section {  
+  
+display:block;  
+color:#ffd84d;  
+font-weight:bold;  
+margin:15px 0 5px;  
+  
+}  
+  
+#viewCount{  
+margin:18px 0;  
+font-size:18px;  
+font-weight:bold;  
+color:#ffd84d;  
+}  
+  </style>  </head>  
+<body>  <div class="top-nav">  
+  <a href="index.html">Home</a>  
+  <a href="tracks.html" class="active">Tracks</a>  
+  <a href="albums.html">Albums</a>  
+</div>  <div class="box">    <div class="header">  
+    <div>Masiha Favaran</div>  
+    <div>Rafti Ke Nabashi</div>  
+  </div>    <img src="CoverMusic.png">    <audio controls>  
+    <source src="RaftiKeNabashi.mp3" type="audio/mpeg">  
+  </audio>    <a class="download" href="RaftiKeNabashi.mp3" download>  
+    Download High Quality  
+  </a>    <div id="viewCount">  
+    بازدید: درحال محاسبه بازدید  
+  </div>    <div class="lyrics">  <h2>Lyrics</h2>  
 
-  <style>
-    * { box-sizing: border-box; }
+<span class="section">Verse 1</span>  
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
-      background: linear-gradient(-45deg, #0f0f0f, #1a0033, #000000, #001a33);
-      background-size: 400% 400%;
-      animation: bg 10s ease infinite;
-      overflow-x: hidden;
-      padding-bottom: 40px;
-    }
+ساعت ۳ صبح صدا فندک سیگار<br>  
+می‌شنومت صدای خنده‌ات میاد<br>  
+چپم میگیرم دادم از دست چیا<br>  
+ولی خاطرات مغزمو هرشب میگاد<br><br>  
 
-    @keyframes bg {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+غروب شده داره باز آفتاب میره<br>  
+ریه هام شده مث آسفالت تیره<br>  
+مشخصه آدم بده داستان کیه<br>  
+جوری بدتو گفتم همه بات آشنان دیگه<br><br>  
 
-    /* ===== TOP NAV TABS ===== */
-    .top-nav {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 20px auto 40px;
-      background: rgba(255,255,255,0.06);
-      padding: 10px;
-      border-radius: 50px;
-      width: fit-content;
-      backdrop-filter: blur(12px);
-    }
+<span class="section">Chorus</span>  
 
-    .top-nav a {
-      text-decoration: none;
-      color: #aaa;
-      padding: 8px 18px;
-      border-radius: 30px;
-      font-size: 14px;
-      transition: 0.25s ease;
-    }
+تو خودت رفتی که نباشی<br>  
+برا رسیدن بهم نکردی تلاشی<br>  
+تو کل مدت نزدم دستی بهت<br>  
+بگو الان شده بدنت براکی<br><br>  
 
-    .top-nav a:hover {
-      color: #00ffff;
-    }
+تو خودت رفتی که نباشی<br>  
+برا رسیدن بهم نکردی تلاشی<br>  
+تو کل مدت نزدم دستی بهت<br>  
+بگو الان شده بدنت براکی<br><br>  
 
-    .top-nav a.active {
-      background: rgba(0,255,255,0.15);
-      color: #00ffff;
-    }
+<span class="section">Verse 2</span>  
 
-    /* ===== MAIN BOX ===== */
-    .box {
-      width: 90%;
-      max-width: 420px;
-      margin: 20px auto;
-      padding: 25px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.1);
-      box-shadow: 0 0 25px rgba(0,0,0,0.6);
-    }
+لعنت به خودتو با اونکه هستی باهاشو<br>  
+بی دلیل دَکَم کردی پس میدی کارماشو<br>  
+ضایع‌اس، تقصیر خودت بودو کاراتو<br>  
+سَرم بره زیر گیوتین برنمیگردم باتو<br><br>  
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-    }
+بهم گفتی که واست بودم الگو<br>  
+ولی چرا پس همه کارات فول بود<br>  
+شبا مستی با غریبه،منو رفته یادت<br>  
+اینجا موندمو سقف اتاقم پُر دود<br><br>  
 
-    .en { font-size: 12px; opacity: 0.7; }
-    .fa { font-size: 14px; font-weight: bold; }
+<span class="section">Chorus</span>  
 
-    img {
-      width: 100%;
-      border-radius: 15px;
-      margin-bottom: 15px;
-    }
+تو خودت رفتی که نباشی<br>  
+برا رسیدن بهم نکردی تلاشی<br>  
+تو کل مدت نزدم دستی بهت<br>  
+بگو الان شده بدنت براکی
 
-    audio { width: 100%; }
-
-    .download {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 18px;
-      border-radius: 10px;
-      background: #00ffff;
-      color: black;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    /* ===== LYRICS ===== */
-    .lyrics {
-      margin-top: 25px;
-      padding: 20px;
-      border-radius: 15px;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.1);
-      line-height: 2;
-      font-size: 14px;
-      text-align: right;
-    }
-
-    .section {
-      display: block;
-      margin: 12px 0 6px;
-      font-weight: bold;
-      color: #ffd84d;
-      font-size: 15px;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- TOP NAV -->
-  <div class="top-nav">
-    <a href="index.html">Home</a>
-    <a href="tracks.html" class="active">Tracks</a>
-    <a href="albums.html">Albums</a>
-  </div>
-
-  <div class="box">
-
-    <div class="header">
-      <div class="en">Masiha Favaran</div>
-      <div class="fa">Rafti Ke Nabashi</div>
-    </div>
-
-    <img src="CoverMusic.png" alt="cover">
-
-    <audio controls>
-      <source src="RaftiKeNabashi.mp3" type="audio/mpeg">
-    </audio>
-
-    <a class="download" href="RaftiKeNabashi.mp3" download>
-      Download High Quality
-    </a>
-
-    <div class="lyrics">
-      <h2>Lyrics</h2>
-
-      <span class="section">Verse 1</span>
-      ساعت ۳ صبح صدا فندک سیگار<br>
-      می‌شنومت صدای خنده‌ات میاد<br>
-      چپم میگیرم دادم از دست چیا<br>
-      ولی خاطرات مغزمو هرشب میگاد<br><br>
-
-      غروب شده داره باز آفتاب میره<br>
-      ریه هام شده مث آسفالت تیره<br>
-      مشخصه آدم بده داستان کیه<br>
-      جوری بدتو گفتم همه بات آشنان دیگه<br><br>
-
-      <span class="section">Chorus</span>
-      تو خودت رفتی که نباشی<br>
-      برا رسیدن بهم نکردی تلاشی<br>
-      تو کل مدت نزدم دستی بهت<br>
-      بگو الان شده بدنت براکی<br><br>
-
-      تو خودت رفتی که نباشی<br>
-      برا رسیدن بهم نکردی تلاشی<br>
-      تو کل مدت نزدم دستی بهت<br>
-      بگو الان شده بدنت براکی<br><br>
-
-      <span class="section">Verse 2</span>
-      لعنت به خودتو با اونکه هستی باهاشو<br>
-      بی دلیل دَکَم کردی پس میدی کارماشو<br>
-      ضایع‌اس، تقصیر خودت بودو کاراتو<br>
-      سَرم بره زیر گیوتین برنمیگردم باتو<br><br>
-
-      بهم گفتی که واست بودم الگو<br>
-      ولی چرا پس همه کارات فول بود<br>
-      شبا مستی با غریبه،منو رفته یادت<br>
-      اینجا موندمو سقف اتاقم پُر دود<br><br>
-
-      <span class="section">Chorus</span>
-      تو خودت رفتی که نباشی<br>
-      برا رسیدن بهم نکردی تلاشی<br>
-      تو کل مدت نزدم دستی بهت<br>
-      بگو الان شده بدنت براکی
-    </div>
-
-  </div>
-
-</body>
+  </div>  </div>  <script type="module">  
+  
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";  
+  
+const supabase = createClient(  
+  "https://mzavzvvyowlvechemkdo.supabase.co",  
+  "sb_publishable_HgJ3Y88QZRXOT976GJrjRg_XlPpUdg-"  
+);  
+  
+async function addView(){  
+  
+  if(localStorage.getItem("RaftiKeNabashi_viewed")){  
+    console.log("Already counted");  
+    return;  
+  }  
+  
+  const {data,error}=await supabase  
+    .from("tracks")  
+    .select("views")  
+    .eq("id",2)  
+    .single();  
+  
+  if(error){  
+    console.log("READ ERROR:",error);  
+    return;  
+  }  
+  
+  const {error:updateError}=await supabase  
+    .from("tracks")  
+    .update({  
+      views:data.views + 1  
+    })  
+    .eq("id",2);  
+  
+  if(updateError){  
+    console.log("UPDATE ERROR:",updateError);  
+    return;  
+  }  
+  
+  localStorage.setItem(  
+    "RaftiKeNabashi_viewed",  
+    "true"  
+  );  
+  
+  console.log("VIEW +1");  
+  
+}  
+  
+async function showViews(){  
+  
+  const { data, error } = await supabase  
+    .from("tracks")  
+    .select("views")  
+    .eq("id",2)  
+    .single();  
+  
+  if(error){  
+    console.log("VIEW ERROR:", error);  
+    document.getElementById("viewCount").innerHTML = "خطا در دریافت بازدید";  
+    return;  
+  }  
+  
+  document.getElementById("viewCount").innerHTML =  
+    "بازدید: " + data.views;  
+}  
+  
+(async () => {  
+  await addView();  
+  await showViews();  
+})();  
+  
+</script>  </body>  
 </html>
