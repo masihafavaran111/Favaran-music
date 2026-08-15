@@ -15,19 +15,19 @@ body {
 
   background:
     radial-gradient(
-      circle at 50% 20%,
-      rgba(65, 25, 105, 0.22),
+      circle at 50% 15%,
+      rgba(0, 95, 110, 0.25),
       transparent 32%
     ),
     radial-gradient(
-      circle at 10% 90%,
-      rgba(0, 180, 200, 0.08),
+      circle at 10% 85%,
+      rgba(0, 35, 80, 0.22),
       transparent 30%
     ),
-    #050505;
+    #030507;
 
   overflow-x: hidden;
-  padding-bottom: 60px;
+  padding-bottom: 70px;
 }
 
 a {
@@ -52,27 +52,26 @@ a {
 
   border-radius: 999px;
 
-  background: rgba(10, 10, 10, 0.72);
+  background: rgba(5, 12, 15, 0.76);
 
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
 
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(0, 220, 255, 0.13);
 
   box-shadow:
-    0 15px 45px rgba(0, 0, 0, 0.65),
+    0 15px 50px rgba(0, 0, 0, 0.7),
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
 
   z-index: 9999;
 }
 
 .top-menu a {
-  position: relative;
   display: block;
 
   padding: 10px 18px;
 
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.68);
 
   text-decoration: none;
 
@@ -85,12 +84,12 @@ a {
 }
 
 .top-menu a[href="index.html"] {
-  color: #ffffff;
+  color: #00eaff;
 
-  background: rgba(255, 255, 255, 0.09);
+  background: rgba(0, 234, 255, 0.09);
 
   box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+    inset 0 0 0 1px rgba(0, 234, 255, 0.08);
 }
 
 .box {
@@ -114,11 +113,11 @@ a {
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
 
-  border: 1px solid rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.10);
 
   box-shadow:
     0 35px 100px rgba(0, 0, 0, 0.65),
-    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 
   overflow: hidden;
 }
@@ -128,17 +127,17 @@ a {
 
   position: absolute;
 
-  width: 260px;
-  height: 260px;
+  width: 280px;
+  height: 280px;
 
-  top: -150px;
+  top: -170px;
   left: 50%;
 
   transform: translateX(-50%);
 
-  background: rgba(120, 60, 180, 0.14);
+  background: rgba(0, 210, 255, 0.12);
 
-  filter: blur(80px);
+  filter: blur(85px);
 
   pointer-events: none;
 }
@@ -159,7 +158,7 @@ h1 {
   color: #ffffff;
 
   text-shadow:
-    0 0 35px rgba(255, 255, 255, 0.08);
+    0 0 35px rgba(0, 234, 255, 0.12);
 }
 
 .bio-photo {
@@ -182,18 +181,18 @@ h1 {
 
   border-radius: 24px;
 
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(0, 220, 255, 0.16);
 
   box-shadow:
     0 30px 70px rgba(0, 0, 0, 0.65),
-    0 0 60px rgba(80, 30, 120, 0.12);
+    0 0 55px rgba(0, 220, 255, 0.08);
 }
 
 .photo-caption {
   margin-top: 14px;
   margin-bottom: 35px;
 
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(0, 234, 255, 0.58);
 
   font-size: 12px;
 
@@ -219,9 +218,12 @@ h1 {
 
   background: rgba(255, 255, 255, 0.035);
 
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(0, 220, 255, 0.09);
 
   border-radius: 20px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .bio br + br {
@@ -294,4 +296,4 @@ h1 {
   h1 {
     font-size: 27px;
   }
-}
+    }
