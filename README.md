@@ -14,3 +14,4 @@ Features
 About
 
 This website is intended for personal use and serves as the official online presence of the artist. It is designed to showcase music, connect with listeners, and share future releases and updates.
+Site is for Masiha Favaran
