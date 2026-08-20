@@ -1,0 +1,215 @@
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    direction: rtl;
+    background: #080808;
+    color: #eee;
+    font-family: Tahoma, Arial, sans-serif;
+    line-height: 2;
+}
+
+/* لایه‌ی نور خیلی ظریف */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(255,255,255,0.055),
+            transparent 42%
+        );
+}
+
+/* کانتینر اصلی */
+main {
+    width: min(920px, 92%);
+    margin: 0 auto;
+    padding: 80px 0 50px;
+}
+
+/* هدر کتاب */
+header {
+    position: relative;
+    text-align: center;
+    padding: 90px 25px 75px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #242424;
+}
+
+header::before {
+    content: "FAVARAN";
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    letter-spacing: 7px;
+    color: #555;
+}
+
+header h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(65px, 12vw, 115px);
+    font-weight: 400;
+    letter-spacing: 10px;
+    color: #f1f1f1;
+    line-height: 1.1;
+}
+
+header h1::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 1px;
+    background: #777;
+    margin: 25px auto 18px;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+header p:first-of-type {
+    color: #ddd;
+    font-size: 17px;
+}
+
+header p:last-of-type {
+    color: #777;
+    font-size: 13px;
+}
+
+/* کارت‌های محتوا */
+section {
+    position: relative;
+    background: #0d0d0d;
+    border: 1px solid #1d1d1d;
+    padding: 32px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background: #333;
+}
+
+section h2 {
+    margin: 0 0 15px;
+    padding-right: 18px;
+    color: #eee;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+section p {
+    color: #999;
+    font-size: 15px;
+}
+
+/* فهرست */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    padding: 8px 20px;
+    color: #aaa;
+    border-bottom: 1px solid #191919;
+}
+
+li:last-child {
+    border-bottom: 0;
+}
+
+li::before {
+    content: "—";
+    color: #666;
+    margin-left: 10px;
+}
+
+/* لینک‌ها */
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #eee;
+    background: #151515;
+    border: 1px solid #303030;
+    padding: 10px 22px;
+    margin-top: 8px;
+    border-radius: 7px;
+    transition: 0.2s ease;
+}
+
+a:hover {
+    background: #eee;
+    color: #080808;
+    border-color: #eee;
+}
+
+/* فوتر */
+footer {
+    text-align: center;
+    padding: 45px 20px 20px;
+    color: #555;
+    font-size: 12px;
+}
+
+footer p {
+    margin: 3px 0;
+}
+
+/* موبایل */
+@media (max-width: 600px) {
+
+    main {
+        width: 92%;
+        padding-top: 35px;
+    }
+
+    header {
+        padding: 70px 15px 55px;
+    }
+
+    header h1 {
+        font-size: 65px;
+        letter-spacing: 5px;
+    }
+
+    section {
+        padding: 25px 20px;
+    }
+
+    section h2 {
+        font-size: 19px;
+    }
+
+    section p,
+    li {
+        font-size: 14px;
+    }
+
+    a {
+        width: 100%;
+        text-align: center;
+    }
+}
+</style>
