@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="Kahkeshan.css">
+
+  <title>کهکشان | مسیحا فوران</title>
+</head>
+
+<body>
+
+<div class="top-nav">
+  <a href="index.html">بیوگرافی</a>
+  <a href="tracks.html" class="active">لیست‌موزیک‌ها</a>
+  <a href="album.html">آلبوم‌ها</a>
+  <a href="farman.html">کتاب فرمان</a>
+</div>
+
+<div class="box">
+
+  <div class="header">
+    <div>Masiha Favaran</div>
+    <div>Kahkeshan</div>
+  </div>
+
+  <img src="Kahkeshan.webp" alt="Kahkeshan Cover">
+
+  <audio controls>
+    <source src="Kahkeshan.mp3" type="audio/mpeg">
+  </audio>
+
+  <a class="download" href="Kahkeshan.mp3" download>
+    Download High Quality
+  </a>
+
+  <div id="viewCount">
+    بازدید: درحال محاسبه بازدید
+  </div>
+
+  <div class="lyrics">
+
+    <h2>Lyrics</h2>
+
+    <span class="section">Chorus</span>
+
+    نیستی میبینمت همش توی راهرو<br>
+    مرز‌عشقو‌ رد کردم بدون پاسپورت<br>
+    راه‌زندگیو باشی میرم آفرود<br>
+    روحم پیش‌توعه قلبم تو این کالبد<br><br>
+
+    نیستی میبینمت همش توی راهرو<br>
+    مرز‌عشقو‌ رد کردم بدون پاسپورت<br>
+    راه‌زندگیو باشی میرم آفرود<br>
+    روحم پیش‌توعه قلبم تو این کالبد<br><br>
+
+
+    <span class="section">Verse</span>
+
+    قبل تو فکر میکردم عشق فقط لفظیه<br>
+    وجود خارجی نداره‌،توهم مغزیه<br>
+    جاده‌قلبم پُر از پیچه تو عین گاردریل<br>
+    همه‌کپی‌همدیگه‌ان‌،تو نسخه فابریکه<br><br>
+
+    ماه‌و میخام چیکار وقتی چشمات کهکشانمه‌<br>
+    بجز تو فقط‌ در کنارمه<br>
+    بودی بیشتر از چیزی که انتظارمه<br>
+    می‌خوام تشبیهت کنم هرچی قشنگه استعارمه<br><br>
+
+    من<br>
+    بود کنارم وقتی بود حالم بد<br>
+    بود کنارم وقتی همه‌شدن با‌من بد<br>
+    برا همینه دورت‌میگردم ساعت‌گرد<br><br>
+
+
+    <span class="section">Chorus</span>
+
+    نیستی میبینمت همش توی راهرو<br>
+    مرز‌عشقو‌ رد کردم بدون پاسپورت<br>
+    راه‌زندگیو باشی میرم آفرود<br>
+    روحم پیش‌توعه قلبم تو این کالبد<br><br>
+
+    نیستی میبینمت همش توی راهرو<br>
+    مرز‌عشقو‌ رد کردم بدون پاسپورت<br>
+    راه‌زندگیو باشی میرم آفرود<br>
+    روحم پیش‌توعه قلبم تو این کالبد<br><br>
+
+    نیستی میبینمت همش توی راهرو<br>
+    مرز‌عشقو‌ رد کردم بدون پاسپورت<br>
+    راه‌زندگیو باشی میرم آفرود<br>
+    روحم پیش‌توعه قلبم تو این کالبد<br>
+
+  </div>
+
+</div>
+
+
+<script type="module">
+
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+const supabase = createClient(
+  "https://mzavzvvyowlvechemkdo.supabase.co",
+  "sb_publishable_HgJ3Y88QZRXOT976GJrjRg_XlPpUdg-"
+);
+
+
+async function addView(){
+
+  if(localStorage.getItem("Kahkeshan_viewed")){
+    console.log("Already counted");
+    return;
+  }
+
+  const { data, error } = await supabase
+    .from("tracks")
+    .select("views")
+    .eq("id", 5)
+    .single();
+
+  if(error){
+    console.log("READ ERROR:", error);
+    return;
+  }
+
+  const { error: updateError } = await supabase
+    .from("tracks")
+    .update({
+      views: data.views + 1
+    })
+    .eq("id", 5);
+
+  if(updateError){
+    console.log("UPDATE ERROR:", updateError);
+    return;
+  }
+
+  localStorage.setItem(
+    "Kahkeshan_viewed",
+    "true"
+  );
+
+  console.log("VIEW +1");
+
+}
+
+
+async function showViews(){
+
+  const { data, error } = await supabase
+    .from("tracks")
+    .select("views")
+    .eq("id", 5)
+    .single();
+
+  if(error){
+
+    console.log("VIEW ERROR:", error);
+
+    document.getElementById("viewCount").innerHTML =
+      "خطا در دریافت بازدید";
+
+    return;
+  }
+
+  document.getElementById("viewCount").innerHTML =
+    "بازدید: " + data.views;
+
+}
+
+
+(async () => {
+
+  await addView();
+  await showViews();
+
+})();
+
+</script>
+
+</body>
+</html>
