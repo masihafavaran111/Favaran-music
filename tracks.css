@@ -5,7 +5,6 @@
 html {
   scroll-behavior: smooth;
   background: #030507;
-  overscroll-behavior-y: none;
 }
 
 body {
