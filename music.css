@@ -1,5 +1,6 @@
 /* =========================================================
-   FORAN MUSIC — PREMIUM COSMIC MUSIC PAGE
+   FORAN MUSIC — FINAL PREMIUM CSS
+   Safe scoped version
 ========================================================= */
 
 *,
@@ -8,77 +9,39 @@
   box-sizing: border-box;
 }
 
-:root {
-  --bg: #010305;
-  --bg-2: #03080d;
-
-  --cyan: #00eaff;
-  --cyan-2: #00a8ff;
-  --blue: #315cff;
-  --violet: #704cff;
-
-  --white: #fff;
-  --text: rgba(255, 255, 255, 0.92);
-  --muted: rgba(255, 255, 255, 0.44);
-
-  --line: rgba(255, 255, 255, 0.09);
-
-  --card:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,0.075),
-      rgba(255,255,255,0.025) 48%,
-      rgba(0,234,255,0.018)
-    );
-}
-
-/* =========================================================
-   BASE
-========================================================= */
-
 html {
   margin: 0;
   padding: 0;
-
-  background: var(--bg);
-
+  background: #020305;
   scroll-behavior: smooth;
 }
 
 body {
-  position: relative;
-
   margin: 0;
   min-height: 100vh;
-
   overflow-x: hidden;
 
-  padding: 0 0 90px;
-
-  color: var(--text);
+  color: #fff;
 
   background:
     radial-gradient(
-      850px 500px at 50% -100px,
-      rgba(0,234,255,0.15),
-      transparent 66%
+      900px 500px at 50% -120px,
+      rgba(0, 220, 255, 0.14),
+      transparent 65%
     ),
     radial-gradient(
-      650px 550px at 100% 55%,
-      rgba(49,92,255,0.08),
+      650px 500px at 100% 70%,
+      rgba(0, 80, 180, 0.09),
       transparent 68%
     ),
     radial-gradient(
-      600px 500px at 0% 75%,
-      rgba(0,140,255,0.055),
+      550px 450px at 0% 80%,
+      rgba(0, 160, 200, 0.05),
       transparent 70%
     ),
-    var(--bg);
+    #020305;
 
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
   text-align: center;
 
@@ -86,62 +49,20 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-body::before {
-  content: "";
-
-  position: fixed;
-  inset: 0;
-
-  z-index: -1;
-
-  pointer-events: none;
-
-  opacity: 0.12;
-
-  background-image:
-    radial-gradient(
-      circle,
-      rgba(255,255,255,0.85) 0.7px,
-      transparent 1px
-    );
-
-  background-size: 97px 97px;
-  background-position: 17px 21px;
-}
-
-body::after {
-  content: "";
-
-  position: fixed;
-  inset: 0;
-
-  z-index: -1;
-
-  pointer-events: none;
-
-  background:
-    radial-gradient(
-      ellipse at center,
-      transparent 45%,
-      rgba(0,0,0,0.32) 100%
-    );
-}
-
 a {
   color: inherit;
-
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
 }
 
+
 /* =========================================================
-   TOP MENU
+   NAVIGATION
 ========================================================= */
 
 .top-menu {
   position: fixed;
-
-  top: 17px;
+  top: 16px;
   left: 50%;
 
   z-index: 9999;
@@ -151,27 +72,27 @@ a {
   justify-content: center;
 
   width: max-content;
-  max-width: calc(100% - 20px);
+  max-width: calc(100% - 18px);
 
   padding: 6px;
   gap: 3px;
 
   transform: translateX(-50%);
 
-  border: 1px solid rgba(255,255,255,0.10);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 999px;
 
   background:
     linear-gradient(
       180deg,
-      rgba(15,25,31,0.95),
-      rgba(2,7,11,0.92)
+      rgba(14, 23, 29, 0.96),
+      rgba(3, 8, 12, 0.94)
     );
 
   box-shadow:
-    0 20px 65px rgba(0,0,0,0.72),
-    0 0 45px rgba(0,234,255,0.035),
-    inset 0 1px 0 rgba(255,255,255,0.075);
+    0 20px 65px rgba(0, 0, 0, 0.7),
+    0 0 35px rgba(0, 234, 255, 0.035),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
 
   isolation: isolate;
 }
@@ -182,52 +103,24 @@ a {
   position: absolute;
   inset: 1px;
 
-  z-index: -1;
-
   border-radius: inherit;
 
   background:
     linear-gradient(
-      115deg,
+      110deg,
       transparent 10%,
-      rgba(0,234,255,0.07),
+      rgba(0, 234, 255, 0.07),
       transparent 45%,
-      rgba(112,76,255,0.04),
+      rgba(80, 70, 255, 0.04),
       transparent 90%
     );
 
   pointer-events: none;
 }
 
-.top-menu::after {
-  content: "";
-
-  position: absolute;
-
-  left: 15%;
-  right: 15%;
-  bottom: -1px;
-
-  height: 1px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(0,234,255,0.5),
-      transparent
-    );
-
-  box-shadow:
-    0 0 12px rgba(0,234,255,0.35);
-
-  opacity: 0.6;
-
-  pointer-events: none;
-}
-
 .top-menu a {
   position: relative;
+  z-index: 2;
 
   display: block;
 
@@ -235,7 +128,7 @@ a {
 
   border-radius: 999px;
 
-  color: rgba(255,255,255,0.56);
+  color: rgba(255, 255, 255, 0.57);
 
   text-decoration: none;
 
@@ -245,40 +138,41 @@ a {
   letter-spacing: 0.2px;
 
   transition:
-    color 0.22s ease,
-    background 0.22s ease,
-    box-shadow 0.22s ease,
-    transform 0.22s ease;
+    color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 .top-menu a:hover {
   color: #fff;
 
-  background: rgba(255,255,255,0.055);
+  background: rgba(255, 255, 255, 0.055);
 
   transform: translateY(-1px);
 }
 
 .top-menu a[href="tracks.html"] {
-  color: var(--cyan);
+  color: #00eaff;
 
   background:
     linear-gradient(
       135deg,
-      rgba(0,234,255,0.14),
-      rgba(0,120,255,0.055)
+      rgba(0, 234, 255, 0.14),
+      rgba(0, 120, 255, 0.055)
     );
 
   box-shadow:
-    inset 0 0 0 1px rgba(0,234,255,0.11),
-    0 0 25px rgba(0,234,255,0.055);
+    inset 0 0 0 1px rgba(0, 234, 255, 0.1),
+    0 0 25px rgba(0, 234, 255, 0.06);
 }
 
+
 /* =========================================================
-   TITLE
+   ONLY MUSIC PAGE ELEMENTS
 ========================================================= */
 
-h1 {
+body:has(.track) h1 {
   position: relative;
 
   margin: 125px 20px 14px;
@@ -294,10 +188,10 @@ h1 {
   background:
     linear-gradient(
       135deg,
-      #ffffff 5%,
-      #c8fbff 30%,
-      #00eaff 62%,
-      #72c8ff 100%
+      #00f5ff 0%,
+      #66efff 35%,
+      #ffffff 68%,
+      #8eeaff 100%
     );
 
   -webkit-background-clip: text;
@@ -305,10 +199,10 @@ h1 {
   -webkit-text-fill-color: transparent;
 
   filter:
-    drop-shadow(0 0 25px rgba(0,234,255,0.10));
+    drop-shadow(0 0 22px rgba(0, 234, 255, 0.09));
 }
 
-h1::after {
+body:has(.track) h1::after {
   content: "";
 
   display: block;
@@ -318,35 +212,37 @@ h1::after {
 
   margin: 17px auto 0;
 
-  border-radius: 99px;
+  border-radius: 999px;
 
-  background: var(--cyan);
+  background: #00eaff;
 
   box-shadow:
-    0 0 8px var(--cyan),
-    0 0 25px rgba(0,234,255,0.55);
+    0 0 10px rgba(0, 234, 255, 0.8),
+    0 0 25px rgba(0, 234, 255, 0.35);
 }
 
-body > p {
+body:has(.track) > p {
   max-width: 620px;
 
-  margin: 0 auto 43px;
+  margin: 0 auto 42px;
 
   padding: 0 22px;
 
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.43);
 
   font-size: 12px;
-  line-height: 1.85;
+
+  line-height: 1.8;
 
   letter-spacing: 0.6px;
 }
 
+
 /* =========================================================
-   MUSIC CONTAINER
+   TRACK LIST
 ========================================================= */
 
-.container {
+body:has(.track) .container {
   width: 100%;
 
   display: flex;
@@ -355,14 +251,10 @@ body > p {
 
   gap: 14px;
 
-  padding: 0 0 70px;
+  padding: 0 0 65px;
 }
 
-/* =========================================================
-   TRACK CARD
-========================================================= */
-
-.track {
+body:has(.track) .track {
   position: relative;
 
   width: min(92%, 580px);
@@ -377,20 +269,26 @@ body > p {
 
   overflow: hidden;
 
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.085);
   border-radius: 25px;
 
-  background: var(--card);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.025) 50%,
+      rgba(0, 234, 255, 0.018)
+    );
 
   box-shadow:
-    0 22px 60px rgba(0,0,0,0.52),
-    0 0 35px rgba(0,234,255,0.018),
-    inset 0 1px 0 rgba(255,255,255,0.06);
+    0 22px 60px rgba(0, 0, 0, 0.5),
+    0 0 35px rgba(0, 234, 255, 0.018),
+    inset 0 1px 0 rgba(255, 255, 255, 0.055);
 
   contain: layout paint;
 }
 
-.track::before {
+body:has(.track) .track::before {
   content: "";
 
   position: absolute;
@@ -405,24 +303,24 @@ body > p {
     linear-gradient(
       90deg,
       transparent,
-      rgba(255,255,255,0.20),
-      rgba(0,234,255,0.12),
-      rgba(255,255,255,0.20),
+      rgba(255, 255, 255, 0.18),
+      rgba(0, 234, 255, 0.12),
+      rgba(255, 255, 255, 0.18),
       transparent
     );
 
   pointer-events: none;
 }
 
-.track::after {
+body:has(.track) .track::after {
   content: "";
 
   position: absolute;
 
-  width: 190px;
-  height: 190px;
+  width: 180px;
+  height: 180px;
 
-  top: -125px;
+  top: -115px;
   right: -90px;
 
   border-radius: 50%;
@@ -430,18 +328,19 @@ body > p {
   background:
     radial-gradient(
       circle,
-      rgba(0,234,255,0.07),
+      rgba(0, 234, 255, 0.07),
       transparent 70%
     );
 
   pointer-events: none;
 }
 
+
 /* =========================================================
    COVER
 ========================================================= */
 
-.cover {
+body:has(.track) .cover {
   position: relative;
   z-index: 2;
 
@@ -454,23 +353,24 @@ body > p {
 
   object-fit: cover;
 
-  border: 1px solid rgba(255,255,255,0.13);
+  border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 18px;
 
   background: #05090c;
 
   box-shadow:
-    0 12px 30px rgba(0,0,0,0.58),
-    0 0 25px rgba(0,234,255,0.035);
+    0 12px 30px rgba(0, 0, 0, 0.58),
+    0 0 25px rgba(0, 234, 255, 0.035);
 
   user-select: none;
 }
 
+
 /* =========================================================
-   TRACK INFO
+   INFO
 ========================================================= */
 
-.info {
+body:has(.track) .info {
   position: relative;
   z-index: 3;
 
@@ -480,7 +380,7 @@ body > p {
   text-align: left;
 }
 
-.title {
+body:has(.track) .title {
   margin: 0 0 7px;
 
   color: #fff;
@@ -493,24 +393,21 @@ body > p {
   letter-spacing: -0.15px;
 }
 
-.title a {
+body:has(.track) .title a {
   color: #fff;
-
   text-decoration: none;
-
-  transition:
-    color 0.2s ease;
 }
 
-.title a:hover {
-  color: var(--cyan);
+body:has(.track) .title a:hover {
+  color: #00eaff;
 }
+
 
 /* =========================================================
-   TRACK BUTTONS
+   BUTTONS
 ========================================================= */
 
-.btns {
+body:has(.track) .btns {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -518,7 +415,7 @@ body > p {
   gap: 7px;
 }
 
-.btns a {
+body:has(.track) .btns a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -527,13 +424,12 @@ body > p {
 
   padding: 3px 9px;
 
-  border: 1px solid rgba(0,234,255,0.09);
+  border: 1px solid rgba(0, 234, 255, 0.09);
   border-radius: 999px;
 
-  color: rgba(0,234,255,0.88);
+  color: rgba(0, 234, 255, 0.88);
 
-  background:
-    rgba(0,234,255,0.045);
+  background: rgba(0, 234, 255, 0.045);
 
   text-decoration: none;
 
@@ -546,24 +442,19 @@ body > p {
     color 0.2s ease,
     background 0.2s ease,
     border-color 0.2s ease,
-    box-shadow 0.2s ease,
     transform 0.2s ease;
 }
 
-.btns a:hover {
+body:has(.track) .btns a:hover {
   color: #fff;
 
-  background:
-    rgba(0,234,255,0.11);
+  background: rgba(0, 234, 255, 0.11);
 
-  border-color:
-    rgba(0,234,255,0.28);
-
-  box-shadow:
-    0 0 18px rgba(0,234,255,0.06);
+  border-color: rgba(0, 234, 255, 0.27);
 
   transform: translateY(-1px);
 }
+
 
 /* =========================================================
    COSMIC OFFICIAL WEBSITE BOX
@@ -572,53 +463,54 @@ body > p {
 .cosmic-music {
   position: relative;
 
-  width: 100%;
-  max-width: 500px;
+  width: min(92%, 500px);
 
   min-height: 315px;
 
-  margin: 48px auto 12px;
+  margin: 48px auto 15px;
 
-  padding: 34px 22px 28px;
+  padding: 35px 22px 28px;
 
   overflow: hidden;
+
   isolation: isolate;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  color: #fff;
-
   text-align: center;
+
+  color: #fff;
 
   background:
     radial-gradient(
-      circle at 50% 45%,
-      rgba(0,234,255,0.13),
-      transparent 28%
+      circle at 50% 42%,
+      rgba(0, 234, 255, 0.14),
+      transparent 29%
     ),
     radial-gradient(
-      circle at 85% 85%,
-      rgba(75,55,255,0.12),
-      transparent 35%
+      circle at 90% 90%,
+      rgba(70, 60, 255, 0.12),
+      transparent 36%
     ),
     radial-gradient(
-      circle at 12% 15%,
-      rgba(0,130,255,0.08),
-      transparent 32%
+      circle at 10% 10%,
+      rgba(0, 130, 255, 0.09),
+      transparent 33%
     ),
-    #02060c;
+    #02060b;
 
-  border: 1px solid rgba(0,234,255,0.19);
+  border: 1px solid rgba(0, 234, 255, 0.18);
 
   border-radius: 30px;
 
   box-shadow:
-    0 35px 90px rgba(0,0,0,0.68),
-    0 0 70px rgba(0,190,255,0.065),
-    inset 0 0 60px rgba(0,180,255,0.035);
+    0 35px 90px rgba(0, 0, 0, 0.7),
+    0 0 70px rgba(0, 200, 255, 0.06),
+    inset 0 0 65px rgba(0, 180, 255, 0.035);
 }
+
 
 /* =========================================================
    COSMIC GLOW
@@ -629,7 +521,7 @@ body > p {
 
   position: absolute;
 
-  width: 430px;
+  width: 440px;
   height: 360px;
 
   top: 50%;
@@ -640,13 +532,13 @@ body > p {
   background:
     radial-gradient(
       ellipse,
-      rgba(0,234,255,0.15),
+      rgba(0, 234, 255, 0.15),
       transparent 38%
     ),
     radial-gradient(
       ellipse at 80% 75%,
-      rgba(80,60,255,0.12),
-      transparent 35%
+      rgba(80, 60, 255, 0.12),
+      transparent 36%
     );
 
   filter: blur(30px);
@@ -655,6 +547,7 @@ body > p {
 
   z-index: -3;
 }
+
 
 /* =========================================================
    COSMIC BORDER
@@ -675,10 +568,10 @@ body > p {
   background:
     linear-gradient(
       120deg,
-      rgba(0,234,255,0.72),
-      rgba(0,120,255,0.15),
-      rgba(105,65,255,0.65),
-      rgba(0,234,255,0.12)
+      rgba(0, 234, 255, 0.7),
+      rgba(0, 120, 255, 0.12),
+      rgba(100, 60, 255, 0.6),
+      rgba(0, 234, 255, 0.12)
     );
 
   -webkit-mask:
@@ -691,12 +584,14 @@ body > p {
   pointer-events: none;
 }
 
+
 /* =========================================================
    STARS
 ========================================================= */
 
 .cosmic-stars {
   position: absolute;
+
   inset: 0;
 
   z-index: -1;
@@ -706,17 +601,17 @@ body > p {
   background-image:
     radial-gradient(
       circle,
-      rgba(255,255,255,0.95) 0.8px,
+      rgba(255, 255, 255, 0.95) 0.8px,
       transparent 1.2px
     ),
     radial-gradient(
       circle,
-      rgba(0,234,255,0.90) 0.8px,
+      rgba(0, 234, 255, 0.9) 0.8px,
       transparent 1.2px
     ),
     radial-gradient(
       circle,
-      rgba(255,255,255,0.60) 0.6px,
+      rgba(255, 255, 255, 0.55) 0.6px,
       transparent 1px
     );
 
@@ -733,6 +628,7 @@ body > p {
   opacity: 0.34;
 }
 
+
 /* =========================================================
    COSMIC CONTENT
 ========================================================= */
@@ -745,6 +641,7 @@ body > p {
   width: 100%;
 }
 
+
 /* =========================================================
    LABEL
 ========================================================= */
@@ -754,7 +651,7 @@ body > p {
 
   margin-bottom: 17px;
 
-  color: rgba(0,234,255,0.75);
+  color: rgba(0, 234, 255, 0.76);
 
   font-size: 8px;
   font-weight: 800;
@@ -762,8 +659,9 @@ body > p {
   letter-spacing: 4.5px;
 
   text-shadow:
-    0 0 16px rgba(0,234,255,0.55);
+    0 0 18px rgba(0, 234, 255, 0.5);
 }
+
 
 /* =========================================================
    ORBIT
@@ -777,14 +675,14 @@ body > p {
 
   margin: 0 auto 21px;
 
-  border: 1px solid rgba(0,234,255,0.31);
+  border: 1px solid rgba(0, 234, 255, 0.3);
 
   border-radius: 50%;
 
   box-shadow:
-    0 0 25px rgba(0,234,255,0.10),
-    0 0 60px rgba(0,130,255,0.055),
-    inset 0 0 30px rgba(0,234,255,0.075);
+    0 0 25px rgba(0, 234, 255, 0.1),
+    0 0 60px rgba(0, 130, 255, 0.05),
+    inset 0 0 30px rgba(0, 234, 255, 0.07);
 }
 
 .cosmic-orbit::before {
@@ -798,14 +696,14 @@ body > p {
   top: 26px;
   left: -15px;
 
-  border: 1px solid rgba(0,234,255,0.38);
+  border: 1px solid rgba(0, 234, 255, 0.38);
 
   border-radius: 50%;
 
   transform: rotate(-24deg);
 
   box-shadow:
-    0 0 14px rgba(0,234,255,0.08);
+    0 0 14px rgba(0, 234, 255, 0.08);
 }
 
 .cosmic-orbit::after {
@@ -819,15 +717,16 @@ body > p {
   top: 23px;
   left: -16px;
 
-  border: 1px solid rgba(80,70,255,0.27);
+  border: 1px solid rgba(80, 70, 255, 0.27);
 
   border-radius: 50%;
 
   transform: rotate(34deg);
 }
 
+
 /* =========================================================
-   COSMIC CORE
+   CORE
 ========================================================= */
 
 .cosmic-core {
@@ -849,7 +748,7 @@ body > p {
       #7fffff 20%,
       #00eaff 39%,
       #007dff 61%,
-      rgba(0,70,255,0.08) 79%,
+      rgba(0, 70, 255, 0.08) 79%,
       transparent 83%
     );
 
@@ -857,7 +756,7 @@ body > p {
     0 0 12px rgba(255,255,255,0.85),
     0 0 27px rgba(0,234,255,0.95),
     0 0 58px rgba(0,170,255,0.45),
-    0 0 90px rgba(60,70,255,0.20);
+    0 0 90px rgba(60,70,255,0.2);
 }
 
 .cosmic-core::after {
@@ -877,8 +776,9 @@ body > p {
 
   box-shadow:
     0 0 10px #fff,
-    0 0 20px var(--cyan);
+    0 0 20px #00eaff;
 }
+
 
 /* =========================================================
    COSMIC TITLE
@@ -897,8 +797,9 @@ body > p {
   letter-spacing: -0.7px;
 
   text-shadow:
-    0 0 25px rgba(0,234,255,0.10);
+    0 0 25px rgba(0, 234, 255, 0.1);
 }
+
 
 /* =========================================================
    COSMIC TEXT
@@ -917,6 +818,7 @@ body > p {
 
   line-height: 2;
 }
+
 
 /* =========================================================
    COSMIC BUTTON
@@ -938,7 +840,7 @@ body > p {
 
   overflow: hidden;
 
-  color: var(--cyan);
+  color: #00eaff;
 
   text-decoration: none;
 
@@ -974,7 +876,7 @@ body > p {
   position: absolute;
 
   top: 0;
-  left: -100%;
+  left: -110%;
 
   width: 65%;
   height: 100%;
@@ -1024,6 +926,7 @@ body > p {
   transform: scale(0.975);
 }
 
+
 /* =========================================================
    ARROW
 ========================================================= */
@@ -1041,8 +944,9 @@ body > p {
   transform: translateX(-6px);
 }
 
+
 /* =========================================================
-   COSMIC FOOTER
+   FOOTER
 ========================================================= */
 
 .cosmic-footer {
@@ -1081,6 +985,7 @@ body > p {
     0 0 13px rgba(0,234,255,0.38);
 }
 
+
 /* =========================================================
    MOBILE
 ========================================================= */
@@ -1101,13 +1006,13 @@ body > p {
         rgba(49,92,255,0.07),
         transparent 70%
       ),
-      var(--bg);
+      #020305;
   }
 
   .top-menu {
     top: 11px;
 
-    max-width: calc(100% - 16px);
+    max-width: calc(100% - 14px);
 
     padding: 5px;
     gap: 2px;
@@ -1119,7 +1024,7 @@ body > p {
     font-size: 11px;
   }
 
-  h1 {
+  body:has(.track) h1 {
     margin-top: 94px;
 
     font-size: 40px;
@@ -1127,19 +1032,21 @@ body > p {
     letter-spacing: -2.2px;
   }
 
-  body > p {
+  body:has(.track) > p {
     margin-bottom: 31px;
 
     font-size: 11px;
+
+    letter-spacing: 0.45px;
   }
 
-  .container {
+  body:has(.track) .container {
     gap: 12px;
 
     padding-bottom: 60px;
   }
 
-  .track {
+  body:has(.track) .track {
     width: calc(100% - 22px);
 
     min-height: 88px;
@@ -1151,7 +1058,7 @@ body > p {
     border-radius: 21px;
   }
 
-  .cover {
+  body:has(.track) .cover {
     width: 62px;
     height: 62px;
 
@@ -1160,23 +1067,26 @@ body > p {
     border-radius: 16px;
   }
 
-  .title {
+  body:has(.track) .title {
     margin-bottom: 6px;
 
     font-size: 15px;
   }
 
-  .btns {
+  body:has(.track) .btns {
     gap: 5px;
   }
 
-  .btns a {
+  body:has(.track) .btns a {
     min-height: 20px;
 
     padding: 3px 7px;
 
     font-size: 9px;
   }
+
+
+  /* COSMIC MOBILE */
 
   .cosmic-music {
     width: calc(100% - 18px);
@@ -1196,4 +1106,176 @@ body > p {
     letter-spacing: 4px;
   }
 
-  .cosmic-or
+  .cosmic-orbit {
+    width: 82px;
+    height: 82px;
+  }
+
+  .cosmic-orbit::before {
+    width: 108px;
+    height: 32px;
+
+    top: 24px;
+    left: -14px;
+  }
+
+  .cosmic-orbit::after {
+    width: 112px;
+    height: 36px;
+
+    top: 22px;
+    left: -15px;
+  }
+
+  .cosmic-core {
+    width: 36px;
+    height: 36px;
+
+    top: 22px;
+    left: 22px;
+  }
+
+  .cosmic-title {
+    font-size: 21px;
+  }
+
+  .cosmic-text {
+    max-width: 310px;
+
+    font-size: 12px;
+  }
+
+  .cosmic-button {
+    min-width: 190px;
+
+    padding: 12px 20px;
+
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .top-menu {
+    max-width: calc(100% - 8px);
+  }
+
+  .top-menu a {
+    padding: 8px 9px;
+
+    font-size: 10px;
+  }
+
+  body:has(.track) h1 {
+    font-size: 35px;
+
+    letter-spacing: -1.8px;
+  }
+
+  body:has(.track) .track {
+    width: calc(100% - 16px);
+
+    min-height: 84px;
+
+    gap: 11px;
+
+    padding: 10px;
+
+    border-radius: 19px;
+  }
+
+  body:has(.track) .cover {
+    width: 58px;
+    height: 58px;
+
+    flex-basis: 58px;
+
+    border-radius: 14px;
+  }
+
+  body:has(.track) .title {
+    font-size: 14px;
+  }
+
+  .cosmic-music {
+    width: calc(100% - 12px);
+
+    min-height: 295px;
+
+    padding: 27px 12px 22px;
+  }
+
+  .cosmic-title {
+    font-size: 20px;
+  }
+
+  .cosmic-text {
+    font-size: 11px;
+  }
+
+  .cosmic-button {
+    min-width: 180px;
+  }
+}
+
+
+/* =========================================================
+   TINY PHONES
+========================================================= */
+
+@media (max-width: 330px) {
+
+  .top-menu a {
+    padding: 7px 7px;
+
+    font-size: 9px;
+  }
+
+  body:has(.track) h1 {
+    font-size: 31px;
+  }
+
+  body:has(.track) .track {
+    width: calc(100% - 12px);
+  }
+
+  body:has(.track) .cover {
+    width: 54px;
+    height: 54px;
+
+    flex-basis: 54px;
+  }
+
+  .cosmic-title {
+    font-size: 19px;
+  }
+
+  .cosmic-button {
+    min-width: 172px;
+
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+     }
