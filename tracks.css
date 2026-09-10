@@ -4,6 +4,8 @@
 
 html {
   scroll-behavior: smooth;
+  background: #030507;
+  overscroll-behavior-y: none;
 }
 
 body {
@@ -293,4 +295,4 @@ body > p {
     width: 58px;
     height: 58px;
   }
-              }
+  }
