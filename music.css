@@ -28,7 +28,7 @@ body {
     #030507;
 
   overflow-x: hidden;
-  padding: 22px 12px 70px;
+  padding-bottom: 70px;
 }
 
 a {
@@ -53,19 +53,16 @@ a {
 
   border-radius: 999px;
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(91, 62, 36, 0.96),
-      rgba(48, 30, 17, 0.97)
-    );
+  background: rgba(5, 12, 15, 0.76);
 
-  border: 1px solid rgba(184, 130, 72, 0.45);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  border: 1px solid rgba(0, 220, 255, 0.13);
 
   box-shadow:
     0 15px 50px rgba(0, 0, 0, 0.7),
-    inset 0 1px 0 rgba(255, 220, 170, 0.12),
-    0 0 25px rgba(105, 65, 30, 0.15);
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 
   z-index: 9999;
 }
@@ -75,7 +72,7 @@ a {
 
   padding: 10px 18px;
 
-  color: rgba(255, 235, 205, 0.72);
+  color: rgba(255, 255, 255, 0.68);
 
   text-decoration: none;
 
@@ -88,12 +85,12 @@ a {
 }
 
 .top-menu a[href="tracks.html"] {
-  color: #ffe0ad;
+  color: #00eaff;
 
-  background: rgba(255, 205, 135, 0.10);
+  background: rgba(0, 234, 255, 0.09);
 
   box-shadow:
-    inset 0 0 0 1px rgba(255, 210, 150, 0.12);
+    inset 0 0 0 1px rgba(0, 234, 255, 0.08);
 }
 
 h1 {
@@ -110,8 +107,8 @@ h1 {
   background:
     linear-gradient(
       135deg,
-      #f4d19a 0%,
-      #ffe8c2 45%,
+      #00f5ff 0%,
+      #4deeff 45%,
       #ffffff 100%
     );
 
@@ -122,7 +119,7 @@ h1 {
 body > p {
   margin: 0 auto 42px;
 
-  color: rgba(255, 235, 210, 0.48);
+  color: rgba(255, 255, 255, 0.48);
 
   font-size: 13px;
 
@@ -158,17 +155,20 @@ body > p {
   background:
     linear-gradient(
       145deg,
-      rgba(91, 62, 36, 0.94),
-      rgba(48, 30, 17, 0.96)
+      rgba(255, 255, 255, 0.075),
+      rgba(255, 255, 255, 0.025)
     );
 
-  border: 1px solid rgba(184, 130, 72, 0.38);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
 
   border-radius: 24px;
 
   box-shadow:
     0 20px 55px rgba(0, 0, 0, 0.55),
-    inset 0 1px 0 rgba(255, 220, 170, 0.08);
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .cover {
@@ -181,11 +181,11 @@ body > p {
 
   object-fit: cover;
 
-  border: 1px solid rgba(255, 220, 175, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.13);
 
   box-shadow:
     0 12px 30px rgba(0, 0, 0, 0.55),
-    0 0 30px rgba(120, 75, 35, 0.12);
+    0 0 30px rgba(0, 220, 255, 0.08);
 }
 
 .info {
@@ -205,7 +205,7 @@ body > p {
 }
 
 .title a {
-  color: #fff4e4;
+  color: #ffffff;
 
   text-decoration: none;
 }
@@ -213,7 +213,7 @@ body > p {
 .btns a {
   display: inline-block;
 
-  color: #e8bb7b;
+  color: #00eaff;
 
   text-decoration: none;
 
@@ -222,260 +222,13 @@ body > p {
   line-height: 1.5;
 }
 
-.box {
-  position: relative;
-
-  width: min(680px, 100%);
-  max-width: 100%;
-
-  margin: 0 auto;
-  padding: 35px 28px 50px;
-
-  overflow: hidden;
-
-  border: 1px solid rgba(184, 130, 72, 0.30);
-  border-radius: 30px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(78, 51, 29, 0.97),
-      rgba(38, 24, 14, 0.98)
-    );
-
-  box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.58),
-    inset 0 1px 0 rgba(255, 220, 170, 0.07);
-}
-
-.header {
-  width: 100%;
-  max-width: 100%;
-
-  margin: 0 0 26px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 20px;
-
-  direction: ltr;
-}
-
-.header div {
-  min-width: 0;
-  max-width: 50%;
-
-  overflow: hidden;
-
-  color: #fff4e4;
-
-  font-family:
-    Tahoma,
-    "Segoe UI",
-    Arial,
-    sans-serif;
-
-  font-size: clamp(20px, 4.5vw, 30px);
-  font-weight: 900;
-
-  line-height: 1.3;
-
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.header div:last-child {
-  color: #e8bb7b;
-  text-align: right;
-
-  text-shadow:
-    0 0 20px rgba(232, 187, 123, 0.14);
-}
-
-.box > img,
-.box img {
-  display: block;
-
-  width: 100%;
-  max-width: 590px;
-  height: auto;
-
-  aspect-ratio: 1 / 1;
-
-  margin: 0 auto 25px;
-
-  object-fit: cover;
-
-  border: 1px solid rgba(255, 220, 175, 0.13);
-  border-radius: 26px;
-
-  box-shadow:
-    0 25px 65px rgba(0, 0, 0, 0.52),
-    0 0 35px rgba(120, 75, 35, 0.10);
-}
-
-.box a {
-  max-width: 100%;
-}
-
-.box a img {
-  max-width: 590px;
-}
-
-.box audio {
-  display: block;
-
-  width: 100%;
-  max-width: 100%;
-  height: 52px;
-
-  margin: 0 auto 18px;
-
-  border-radius: 30px;
-}
-
-.download {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
-  min-height: 48px;
-
-  margin: 0 auto 15px;
-  padding: 0 25px;
-
-  border: 1px solid rgba(224, 174, 106, 0.38);
-  border-radius: 999px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #e4b46f,
-      #b97935
-    );
-
-  color: #211207;
-
-  font-size: 14px;
-  font-weight: 900;
-
-  text-decoration: none;
-
-  box-shadow:
-    0 10px 30px rgba(100, 55, 20, 0.18),
-    inset 0 1px 0 rgba(255, 245, 220, 0.35);
-}
-
-#viewCount {
-  width: fit-content;
-  max-width: 100%;
-
-  margin: 0 auto 30px;
-  padding: 9px 17px;
-
-  border: 1px solid rgba(255, 194, 70, 0.20);
-  border-radius: 999px;
-
-  background: rgba(255, 185, 50, 0.075);
-
-  color: #ffc857;
-
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.lyrics {
-  width: 100%;
-  max-width: 100%;
-
-  margin-top: 25px;
-  padding: 30px 22px;
-
-  border-top: 1px solid rgba(190, 135, 75, 0.28);
-  border-radius: 22px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(61, 39, 22, 0.58),
-      rgba(31, 20, 12, 0.68)
-    );
-
-  color: rgba(255, 240, 220, 0.94);
-
-  font-size: 16px;
-  line-height: 2;
-
-  direction: ltr;
-
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
-
-.lyrics h2 {
-  margin: 0 0 25px;
-
-  color: #e8bb7b;
-
-  font-family:
-    Impact,
-    Haettenschweiler,
-    "Arial Narrow Bold",
-    sans-serif;
-
-  font-size: 30px;
-  font-weight: 900;
-
-  letter-spacing: 2px;
-  line-height: 1;
-
-  text-transform: uppercase;
-
-  text-shadow:
-    0 0 18px rgba(232, 187, 123, 0.12);
-}
-
-.lyrics .section {
-  display: block;
-
-  width: fit-content;
-  max-width: 100%;
-
-  margin: 28px auto 10px;
-  padding: 5px 14px;
-
-  border: 1px solid rgba(190, 135, 75, 0.24);
-  border-radius: 999px;
-
-  background: rgba(170, 110, 50, 0.08);
-
-  color: #e8bb7b;
-
-  font-size: 12px;
-  font-weight: 900;
-
-  line-height: 1.5;
-  letter-spacing: 1px;
-
-  text-transform: uppercase;
-}
-
 @media (max-width: 600px) {
-  body {
-    padding: 14px 8px 45px;
-  }
-
   .top-menu {
     top: 12px;
 
     gap: 3px;
 
     padding: 6px;
-
-    max-width: calc(100% - 16px);
   }
 
   .top-menu a {
@@ -495,7 +248,7 @@ body > p {
   }
 
   .track {
-    width: calc(100% - 16px);
+    width: calc(100% - 24px);
 
     min-height: 88px;
 
@@ -520,82 +273,6 @@ body > p {
   .btns a {
     font-size: 10px;
   }
-
-  .box {
-    width: 100%;
-    max-width: 100%;
-
-    padding: 26px 15px 40px;
-
-    border-radius: 26px;
-
-    overflow: hidden;
-  }
-
-  .header {
-    gap: 12px;
-    margin-bottom: 20px;
-  }
-
-  .header div {
-    max-width: 50%;
-
-    font-size: 18px;
-    letter-spacing: 1px;
-  }
-
-  .box > img,
-  .box img,
-  .box a img {
-    width: 100%;
-    max-width: 100%;
-
-    height: auto;
-
-    aspect-ratio: 1 / 1;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    border-radius: 22px;
-  }
-
-  .box audio {
-    width: 100%;
-    max-width: 100%;
-
-    height: 50px;
-
-    margin-bottom: 17px;
-  }
-
-  .download {
-    min-height: 45px;
-
-    padding: 0 21px;
-
-    font-size: 13px;
-  }
-
-  #viewCount {
-    margin-bottom: 25px;
-
-    font-size: 12px;
-  }
-
-  .lyrics {
-    width: 100%;
-    max-width: 100%;
-
-    padding: 24px 13px;
-
-    font-size: 15px;
-    line-height: 1.9;
-  }
-
-  .lyrics h2 {
-    font-size: 26px;
-  }
 }
 
 @media (max-width: 380px) {
@@ -610,36 +287,11 @@ body > p {
   }
 
   .track {
-    width: calc(100% - 12px);
+    width: calc(100% - 18px);
   }
 
   .cover {
     width: 58px;
     height: 58px;
   }
-
-  .box {
-    padding-left: 12px;
-    padding-right: 12px;
   }
-
-  .header {
-    gap: 8px;
-  }
-
-  .header div {
-    font-size: 16px;
-  }
-
-  .box > img,
-  .box img,
-  .box a img {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .lyrics {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-    }
