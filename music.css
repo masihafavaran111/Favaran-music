@@ -4,52 +4,47 @@
 
 html {
   background: #050505;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  min-height: 100vh;
   padding: 0 16px 100px;
 
-  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-align: center;
 
   background:
     radial-gradient(
-      circle at 50% -10%,
-      rgba(255, 92, 0, 0.18),
-      transparent 34%
+      ellipse 700px 500px at 50% -100px,
+      rgba(255, 92, 0, 0.16),
+      transparent 70%
     ),
     radial-gradient(
-      circle at 100% 70%,
-      rgba(0, 140, 255, 0.10),
-      transparent 30%
+      ellipse 550px 550px at 100% 65%,
+      rgba(0, 160, 255, 0.10),
+      transparent 70%
     ),
     radial-gradient(
-      circle at 0% 80%,
-      rgba(120, 0, 255, 0.07),
-      transparent 30%
+      ellipse 500px 500px at 0% 85%,
+      rgba(110, 0, 255, 0.07),
+      transparent 70%
     ),
     #050505;
-
-  color: #fff;
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  text-align: center;
 
   overflow-x: hidden;
 }
 
-/* NAVIGATION */
+a {
+  -webkit-tap-highlight-color: transparent;
+}
 
 .top-nav {
   position: fixed;
-
   top: 18px;
   left: 50%;
-
   transform: translateX(-50%);
 
   z-index: 9999;
@@ -59,7 +54,6 @@ body {
   justify-content: center;
 
   gap: 5px;
-
   padding: 6px;
 
   width: max-content;
@@ -73,7 +67,7 @@ body {
 
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.65),
-    inset 0 1px rgba(255, 255, 255, 0.07);
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
 
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
@@ -98,11 +92,8 @@ body {
 
 .top-nav a:hover {
   color: #fff;
-
   background: rgba(255, 255, 255, 0.08);
 }
-
-/* MAIN */
 
 .box {
   position: relative;
@@ -126,7 +117,8 @@ body {
 
   box-shadow:
     0 35px 100px rgba(0, 0, 0, 0.75),
-    inset 0 1px rgba(255, 255, 255, 0.06);
+    0 0 80px rgba(255, 90, 0, 0.035),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
@@ -139,10 +131,10 @@ body {
 
   position: absolute;
 
-  width: 550px;
-  height: 550px;
+  width: 600px;
+  height: 500px;
 
-  top: -350px;
+  top: -360px;
   left: 50%;
 
   transform: translateX(-50%);
@@ -157,17 +149,33 @@ body {
   pointer-events: none;
 }
 
-/* ARTWORK */
+.box::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -280px;
+  bottom: -280px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0, 180, 255, 0.08),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
 
 .header {
   position: relative;
-
   z-index: 2;
 
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
 }
 
@@ -177,7 +185,7 @@ body {
   display: block;
 
   width: min(100%, 620px);
-
+  max-width: 100%;
   height: auto;
 
   margin: 0 auto 27px;
@@ -186,18 +194,15 @@ body {
 
   border: 1px solid rgba(255, 255, 255, 0.12);
 
+  object-fit: cover;
+
   box-shadow:
     0 30px 75px rgba(0, 0, 0, 0.75),
     0 0 60px rgba(0, 0, 0, 0.35);
-
-  object-fit: cover;
 }
-
-/* TITLE */
 
 .header h1 {
   position: relative;
-
   z-index: 2;
 
   margin: 0 0 8px;
@@ -233,42 +238,114 @@ body {
   font-size: 12px;
 }
 
-/* AUDIO */
-
-audio {
-  display: block;
-
+.track-info {
   position: relative;
-
   z-index: 5;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
 
   width: 100%;
 
-  height: 52px;
-
-  margin: 28px auto 20px;
-
-  border-radius: 12px;
+  margin: 25px auto 10px;
 }
 
-/* DOWNLOAD */
-
-.download {
+.info-box {
   position: relative;
 
-  z-index: 5;
+  min-height: 86px;
 
-  display: inline-flex;
+  display: flex;
+
+  flex-direction: column;
 
   align-items: center;
 
   justify-content: center;
 
+  padding: 14px 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.065),
+      rgba(255, 255, 255, 0.018)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.085);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 14px 35px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.info-label {
+  margin-bottom: 8px;
+
+  color: rgba(255, 255, 255, 0.34);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+.info-box #viewCount {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 19px;
+
+  font-weight: 800;
+}
+
+.release-date {
+  color: #fff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+audio {
+  position: relative;
+  z-index: 5;
+
+  display: block;
+
+  width: 100%;
+
+  height: 52px;
+
+  margin: 25px auto 20px;
+
+  border-radius: 12px;
+}
+
+.download {
+  position: relative;
+  z-index: 5;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
   min-width: 190px;
 
-  padding: 13px 25px;
-
   margin: 0 auto 21px;
+
+  padding: 13px 25px;
 
   color: #fff;
 
@@ -291,7 +368,7 @@ audio {
 
   box-shadow:
     0 14px 35px rgba(255, 88, 0, 0.22),
-    inset 0 1px rgba(255, 255, 255, 0.25);
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
 
   transition:
     transform 0.2s ease,
@@ -306,18 +383,15 @@ audio {
 
   box-shadow:
     0 18px 45px rgba(255, 88, 0, 0.32),
-    inset 0 1px rgba(255, 255, 255, 0.28);
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
 }
 
 .download:active {
   transform: scale(0.97);
 }
 
-/* VIEWS */
-
 #viewCount {
   position: relative;
-
   z-index: 2;
 
   margin: 0 0 27px;
@@ -327,11 +401,8 @@ audio {
   font-size: 11px;
 }
 
-/* LYRICS */
-
 .lyrics {
   position: relative;
-
   z-index: 2;
 
   width: 100%;
@@ -359,17 +430,16 @@ audio {
   border-radius: 22px;
 
   box-shadow:
-    inset 0 1px rgba(255, 255, 255, 0.04);
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 20px 50px rgba(0, 0, 0, 0.20);
 }
 
-/* TEXT INSIDE LYRICS */
-
-.lyrics strong,
-.lyrics b {
-  color: #fff;
+button {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
-
-/* SCROLLBAR */
 
 ::-webkit-scrollbar {
   width: 7px;
@@ -381,7 +451,6 @@ audio {
 
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.18);
-
   border-radius: 20px;
 }
 
@@ -391,18 +460,12 @@ audio {
 
 ::selection {
   background: rgba(255, 92, 0, 0.35);
-
   color: #fff;
 }
 
-/* MOBILE */
-
 @media (max-width: 700px) {
-
   body {
-    padding:
-      0 9px
-      70px;
+    padding: 0 9px 70px;
   }
 
   .top-nav {
@@ -452,6 +515,36 @@ audio {
     font-size: 15px;
   }
 
+  .track-info {
+    gap: 9px;
+
+    margin-top: 21px;
+  }
+
+  .info-box {
+    min-height: 74px;
+
+    padding: 11px;
+
+    border-radius: 15px;
+  }
+
+  .info-label {
+    margin-bottom: 6px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .info-box #viewCount {
+    font-size: 16px;
+  }
+
+  .release-date {
+    font-size: 13px;
+  }
+
   audio {
     height: 48px;
 
@@ -468,12 +561,6 @@ audio {
     border-radius: 12px;
   }
 
-  #viewCount {
-    margin-bottom: 21px;
-
-    font-size: 10px;
-  }
-
   .lyrics {
     padding: 21px 14px;
 
@@ -485,10 +572,7 @@ audio {
   }
 }
 
-/* VERY SMALL */
-
 @media (max-width: 390px) {
-
   .top-nav a {
     padding: 8px 8px;
 
@@ -501,8 +585,30 @@ audio {
     padding: 11px;
   }
 
+  .header img,
+  .box > a > img,
+  .box > img {
+    border-radius: 17px;
+  }
+
   .header h1 {
     font-size: 28px;
+  }
+
+  .track-info {
+    gap: 7px;
+  }
+
+  .info-box {
+    min-height: 68px;
+  }
+
+  .info-box #viewCount {
+    font-size: 15px;
+  }
+
+  .release-date {
+    font-size: 12px;
   }
 
   .lyrics {
