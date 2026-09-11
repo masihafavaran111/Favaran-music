@@ -5,11 +5,15 @@
 html {
     margin: 0;
     padding: 0;
+    width: 100%;
+    min-width: 100%;
     background: #02060a;
 }
 
 body {
     margin: 0;
+    width: 100%;
+    min-width: 100%;
     min-height: 100vh;
     padding: 22px 12px 70px;
     overflow-x: hidden;
@@ -37,17 +41,12 @@ body {
     text-align: center;
 }
 
-
-/* =========================
-   TOP NAVIGATION
-========================= */
-
 .top-nav {
     position: relative;
     z-index: 10;
 
     width: fit-content;
-    max-width: calc(100% - 10px);
+    max-width: 100%;
 
     margin: 0 auto 25px;
     padding: 6px;
@@ -74,7 +73,6 @@ body {
 
 .top-nav a {
     display: block;
-
     padding: 10px 16px;
 
     border-radius: 999px;
@@ -92,7 +90,6 @@ body {
 
 .top-nav a:hover {
     color: #ffffff;
-
     background: rgba(0, 220, 255, 0.08);
 }
 
@@ -105,20 +102,19 @@ body {
         inset 0 0 0 1px rgba(0, 220, 255, 0.16);
 }
 
-
-/* =========================
-   MAIN BOX
-========================= */
-
 .box {
     position: relative;
     z-index: 1;
 
+    display: block;
+
     width: min(680px, 100%);
+    max-width: 680px;
 
     margin: 0 auto;
-
     padding: 35px 28px 50px;
+
+    overflow: hidden;
 
     border: 1px solid rgba(0, 220, 255, 0.14);
     border-radius: 32px;
@@ -135,13 +131,9 @@ body {
         0 0 45px rgba(0, 190, 255, 0.045);
 }
 
-
-/* =========================
-   HEADER
-========================= */
-
 .header {
     width: 100%;
+    max-width: 100%;
 
     margin: 0 0 26px;
 
@@ -156,6 +148,7 @@ body {
 
 .header div {
     min-width: 0;
+    max-width: 50%;
 
     overflow: hidden;
 
@@ -179,23 +172,18 @@ body {
 
 .header div:last-child {
     color: #00d9ff;
-
     text-align: right;
 
     text-shadow:
         0 0 20px rgba(0, 217, 255, 0.18);
 }
 
-
-/* =========================
-   COVER
-========================= */
-
-.box > img {
+.box img {
     display: block;
 
     width: 100%;
     max-width: 590px;
+    height: auto;
 
     aspect-ratio: 1 / 1;
 
@@ -211,26 +199,27 @@ body {
         0 0 35px rgba(0, 210, 255, 0.06);
 }
 
+.box a {
+    max-width: 100%;
+}
 
-/* =========================
-   AUDIO PLAYER
-========================= */
+.box a img {
+    width: 100%;
+    max-width: 590px;
+    height: auto;
+}
 
 .box audio {
     display: block;
 
     width: 100%;
+    max-width: 100%;
     height: 52px;
 
     margin: 0 auto 18px;
 
     border-radius: 30px;
 }
-
-
-/* =========================
-   DOWNLOAD BUTTON
-========================= */
 
 .download {
     display: inline-flex;
@@ -277,11 +266,6 @@ body {
         inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
-
-/* =========================
-   VIEW COUNT
-========================= */
-
 #viewCount {
     width: fit-content;
     max-width: 100%;
@@ -303,14 +287,11 @@ body {
         0 8px 25px rgba(255, 170, 30, 0.04);
 }
 
-
-/* =========================
-   LYRICS
-========================= */
-
 .lyrics {
-    margin-top: 25px;
+    width: 100%;
+    max-width: 100%;
 
+    margin-top: 25px;
     padding: 30px 22px;
 
     border-top:
@@ -326,6 +307,9 @@ body {
     line-height: 2;
 
     direction: ltr;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .lyrics h2 {
@@ -355,13 +339,12 @@ body {
     display: block;
 
     width: fit-content;
+    max-width: 100%;
 
     margin: 28px auto 10px;
     padding: 5px 14px;
 
-    border:
-        1px solid rgba(0, 220, 255, 0.16);
-
+    border: 1px solid rgba(0, 220, 255, 0.16);
     border-radius: 999px;
 
     background: rgba(0, 210, 255, 0.06);
@@ -377,12 +360,13 @@ body {
     text-transform: uppercase;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
 @media (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        min-width: 100%;
+    }
 
     body {
         padding: 14px 8px 45px;
@@ -392,10 +376,10 @@ body {
         position: relative;
         top: auto;
 
-        width: fit-content;
-        max-width: 100%;
+        width: calc(100vw - 16px);
+        max-width: calc(100vw - 16px);
 
-        margin-bottom: 18px;
+        margin: 0 auto 18px;
         padding: 5px;
 
         gap: 2px;
@@ -403,41 +387,61 @@ body {
 
     .top-nav a {
         padding: 9px 10px;
-
         font-size: 11px;
     }
 
     .box {
-        width: 100%;
+        display: block;
+
+        width: calc(100vw - 16px);
+        max-width: calc(100vw - 16px);
+
+        margin-left: auto;
+        margin-right: auto;
 
         padding: 26px 15px 40px;
 
         border-radius: 26px;
+
+        overflow: hidden;
     }
 
     .header {
-        gap: 12px;
+        width: 100%;
+        max-width: 100%;
 
+        gap: 12px;
         margin-bottom: 20px;
     }
 
     .header div {
+        max-width: 50%;
         font-size: 18px;
-
         letter-spacing: 1px;
     }
 
-    .box > img {
-        width: 100%;
-        max-width: 590px;
+    .box img,
+    .box a img {
+        display: block;
 
-        margin-bottom: 20px;
+        width: 100%;
+        max-width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 1 / 1;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        object-fit: cover;
 
         border-radius: 22px;
     }
 
     .box audio {
         width: 100%;
+        max-width: 100%;
 
         height: 50px;
 
@@ -453,6 +457,7 @@ body {
     }
 
     #viewCount {
+        max-width: 100%;
         margin-bottom: 25px;
 
         font-size: 12px;
@@ -460,6 +465,7 @@ body {
 
     .lyrics {
         width: 100%;
+        max-width: 100%;
 
         padding: 24px 13px;
 
@@ -473,25 +479,32 @@ body {
     }
 }
 
-
-/* =========================
-   SMALL PHONES
-========================= */
-
 @media (max-width: 380px) {
 
+    body {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
     .top-nav {
-        max-width: 100%;
+        width: calc(100vw - 12px);
+        max-width: calc(100vw - 12px);
 
         padding: 4px;
-
         gap: 1px;
     }
 
     .top-nav a {
         padding: 8px 7px;
-
         font-size: 10px;
+    }
+
+    .box {
+        width: calc(100vw - 12px);
+        max-width: calc(100vw - 12px);
+
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
     .header {
@@ -502,13 +515,14 @@ body {
         font-size: 16px;
     }
 
-    .box {
-        padding-left: 12px;
-        padding-right: 12px;
+    .box img,
+    .box a img {
+        width: 100%;
+        max-width: 100%;
     }
 
     .lyrics {
         padding-left: 10px;
         padding-right: 10px;
     }
-                      }
+            }
