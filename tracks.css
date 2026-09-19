@@ -79,9 +79,7 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* TOP NAV */
-
-.top-nav {
+.top-menu {
   position: fixed;
 
   top: 18px;
@@ -115,7 +113,7 @@ a {
   -webkit-backdrop-filter: blur(24px);
 }
 
-.top-nav a {
+.top-menu a {
   display: block;
 
   padding: 10px 17px;
@@ -132,13 +130,11 @@ a {
   transition: 0.2s ease;
 }
 
-.top-nav a:hover {
+.top-menu a:hover {
   color: #fff;
 
   background: rgba(255, 255, 255, 0.08);
 }
-
-/* TITLE */
 
 h1 {
   position: relative;
@@ -210,8 +206,6 @@ body > p {
   text-align: center;
 }
 
-/* TRACK CONTAINER */
-
 .container {
   width: 100%;
 
@@ -223,8 +217,6 @@ body > p {
 
   padding: 0 0 80px;
 }
-
-/* TRACK CARD */
 
 .track {
   position: relative;
@@ -306,8 +298,6 @@ body > p {
   pointer-events: none;
 }
 
-/* COVER */
-
 .cover {
   position: relative;
 
@@ -334,8 +324,6 @@ body > p {
 
   user-select: none;
 }
-
-/* INFO */
 
 .info {
   position: relative;
@@ -372,8 +360,6 @@ body > p {
 .title a:hover {
   color: var(--cyan);
 }
-
-/* BUTTONS */
 
 .btns {
   display: flex;
@@ -432,13 +418,9 @@ body > p {
     0 0 18px rgba(0, 234, 255, 0.055);
 }
 
-/* TRACK LINK */
-
 .track a {
   -webkit-tap-highlight-color: transparent;
 }
-
-/* SCROLLBAR */
 
 ::-webkit-scrollbar {
   width: 7px;
@@ -466,8 +448,6 @@ body > p {
     rgba(0, 234, 255, 0.55);
 }
 
-/* MOBILE */
-
 @media (max-width: 600px) {
   body {
     padding-bottom: 60px;
@@ -486,7 +466,7 @@ body > p {
       var(--bg);
   }
 
-  .top-nav {
+  .top-menu {
     top: 11px;
 
     gap: 2px;
@@ -496,7 +476,7 @@ body > p {
     border-radius: 15px;
   }
 
-  .top-nav a {
+  .top-menu a {
     padding: 9px 11px;
 
     font-size: 11px;
@@ -576,14 +556,12 @@ body > p {
   }
 }
 
-/* SMALL PHONES */
-
 @media (max-width: 380px) {
-  .top-nav {
+  .top-menu {
     max-width: calc(100% - 12px);
   }
 
-  .top-nav a {
+  .top-menu a {
     padding: 8px 9px;
 
     font-size: 10px;
@@ -626,10 +604,8 @@ body > p {
   }
 }
 
-/* TINY PHONES */
-
 @media (max-width: 330px) {
-  .top-nav a {
+  .top-menu a {
     padding: 7px 8px;
 
     font-size: 9px;
@@ -650,8 +626,6 @@ body > p {
     flex-basis: 54px;
   }
 }
-
-/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
   html {
