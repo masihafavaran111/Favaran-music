@@ -79,118 +79,66 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ================================
-   TOP MENU
-================================ */
+/* TOP NAV */
 
-.top-menu {
+.top-nav {
   position: fixed;
 
   top: 18px;
   left: 50%;
 
-  z-index: 1000;
+  transform: translateX(-50%);
+
+  z-index: 9999;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
+  gap: 5px;
+  padding: 6px;
+
   width: max-content;
   max-width: calc(100% - 24px);
 
-  padding: 6px;
-  gap: 4px;
+  background: rgba(12, 12, 12, 0.82);
 
-  transform: translateX(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.10);
 
-  border: 1px solid rgba(255, 255, 255, 0.085);
-  border-radius: 999px;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(20, 27, 31, 0.96),
-      rgba(5, 9, 12, 0.94)
-    );
+  border-radius: 16px;
 
   box-shadow:
-    0 18px 50px rgba(0, 0, 0, 0.55),
-    0 1px 0 rgba(255, 255, 255, 0.05) inset;
+    0 20px 60px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
 
-  isolation: isolate;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 }
 
-.top-menu::before {
-  content: "";
-
-  position: absolute;
-  inset: 1px;
-
-  z-index: -1;
-
-  border-radius: inherit;
-
-  background:
-    linear-gradient(
-      110deg,
-      transparent 15%,
-      rgba(0, 234, 255, 0.055),
-      transparent 85%
-    );
-
-  pointer-events: none;
-}
-
-.top-menu a {
-  position: relative;
-
-  z-index: 1;
-
+.top-nav a {
   display: block;
 
   padding: 10px 17px;
 
-  border-radius: 999px;
-
-  color: rgba(255, 255, 255, 0.56);
+  color: rgba(255, 255, 255, 0.60);
 
   text-decoration: none;
 
   font-size: 12px;
   font-weight: 600;
 
-  letter-spacing: 0.15px;
+  border-radius: 11px;
 
-  transition:
-    color 0.2s ease,
-    background 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: 0.2s ease;
 }
 
-.top-menu a:hover {
+.top-nav a:hover {
   color: #fff;
 
-  background: rgba(255, 255, 255, 0.055);
+  background: rgba(255, 255, 255, 0.08);
 }
 
-.top-menu a[href="tracks.html"] {
-  color: var(--cyan);
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(0, 234, 255, 0.13),
-      rgba(0, 150, 255, 0.055)
-    );
-
-  box-shadow:
-    inset 0 0 0 1px rgba(0, 234, 255, 0.1),
-    0 0 24px rgba(0, 234, 255, 0.045);
-}
-
-/* ================================
-   TITLE
-================================ */
+/* TITLE */
 
 h1 {
   position: relative;
@@ -223,7 +171,7 @@ h1 {
   font-size: clamp(38px, 8vw, 64px);
   font-weight: 900;
 
-  line-height: 1.05;
+  line-height: 1;
   letter-spacing: -2.8px;
 
   text-align: center;
@@ -262,9 +210,7 @@ body > p {
   text-align: center;
 }
 
-/* ================================
-   TRACK CONTAINER
-================================ */
+/* TRACK CONTAINER */
 
 .container {
   width: 100%;
@@ -275,13 +221,10 @@ body > p {
 
   gap: 14px;
 
-  padding:
-    0 0 80px;
+  padding: 0 0 80px;
 }
 
-/* ================================
-   TRACK CARD
-================================ */
+/* TRACK CARD */
 
 .track {
   position: relative;
@@ -363,9 +306,7 @@ body > p {
   pointer-events: none;
 }
 
-/* ================================
-   COVER
-================================ */
+/* COVER */
 
 .cover {
   position: relative;
@@ -382,6 +323,7 @@ body > p {
   object-fit: cover;
 
   border: 1px solid rgba(255, 255, 255, 0.13);
+
   border-radius: 18px;
 
   background: #080c0f;
@@ -393,9 +335,7 @@ body > p {
   user-select: none;
 }
 
-/* ================================
-   INFO
-================================ */
+/* INFO */
 
 .info {
   position: relative;
@@ -433,14 +373,11 @@ body > p {
   color: var(--cyan);
 }
 
-/* ================================
-   BUTTONS
-================================ */
+/* BUTTONS */
 
 .btns {
   display: flex;
   align-items: center;
-
   flex-wrap: wrap;
 
   gap: 7px;
@@ -456,6 +393,7 @@ body > p {
   padding: 4px 10px;
 
   border: 1px solid rgba(0, 234, 255, 0.09);
+
   border-radius: 999px;
 
   color: rgba(0, 234, 255, 0.88);
@@ -494,17 +432,13 @@ body > p {
     0 0 18px rgba(0, 234, 255, 0.055);
 }
 
-/* ================================
-   TRACK LINK
-================================ */
+/* TRACK LINK */
 
 .track a {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ================================
-   SCROLLBAR
-================================ */
+/* SCROLLBAR */
 
 ::-webkit-scrollbar {
   width: 7px;
@@ -532,12 +466,9 @@ body > p {
     rgba(0, 234, 255, 0.55);
 }
 
-/* ================================
-   MOBILE
-================================ */
+/* MOBILE */
 
 @media (max-width: 600px) {
-
   body {
     padding-bottom: 60px;
 
@@ -555,17 +486,18 @@ body > p {
       var(--bg);
   }
 
-  .top-menu {
+  .top-nav {
     top: 11px;
 
-    max-width: calc(100% - 18px);
+    gap: 2px;
 
     padding: 5px;
-    gap: 2px;
+
+    border-radius: 15px;
   }
 
-  .top-menu a {
-    padding: 9px 12px;
+  .top-nav a {
+    padding: 9px 11px;
 
     font-size: 11px;
   }
@@ -644,17 +576,14 @@ body > p {
   }
 }
 
-/* ================================
-   SMALL PHONES
-================================ */
+/* SMALL PHONES */
 
 @media (max-width: 380px) {
-
-  .top-menu {
+  .top-nav {
     max-width: calc(100% - 12px);
   }
 
-  .top-menu a {
+  .top-nav a {
     padding: 8px 9px;
 
     font-size: 10px;
@@ -697,13 +626,10 @@ body > p {
   }
 }
 
-/* ================================
-   TINY PHONES
-================================ */
+/* TINY PHONES */
 
 @media (max-width: 330px) {
-
-  .top-menu a {
+  .top-nav a {
     padding: 7px 8px;
 
     font-size: 9px;
@@ -725,19 +651,15 @@ body > p {
   }
 }
 
-/* ================================
-   ACCESSIBILITY
-================================ */
+/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
-
   html {
     scroll-behavior: auto;
   }
 
   *,
-  *::before,
-  *::after {
+  *::before {
     transition: none !important;
   }
 }
