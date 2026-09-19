@@ -1,3 +1,100 @@
+:root {
+  --bg: #030507;
+  --bg-soft: #070b0f;
+
+  --cyan: #00eaff;
+  --cyan-soft: rgba(0, 234, 255, 0.12);
+  --blue: #008cff;
+
+  --text: #ffffff;
+  --muted: rgba(255, 255, 255, 0.52);
+
+  --line: rgba(255, 255, 255, 0.09);
+  --glass: rgba(255, 255, 255, 0.045);
+
+  --radius: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  color: var(--text);
+
+  font-family:
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  background:
+    radial-gradient(
+      850px 500px at 50% -160px,
+      rgba(0, 234, 255, 0.105),
+      transparent 70%
+    ),
+    radial-gradient(
+      700px 600px at 100% 55%,
+      rgba(0, 100, 190, 0.075),
+      transparent 72%
+    ),
+    radial-gradient(
+      600px 500px at 0% 85%,
+      rgba(0, 234, 255, 0.045),
+      transparent 72%
+    ),
+    var(--bg);
+
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  z-index: -1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.012),
+      transparent 25%,
+      rgba(0, 0, 0, 0.12)
+    );
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ================================
+   TOP MENU
+================================ */
+
+.top-menu {
+  position: fixed;
+
+  top: 18px;
+  left: 50%;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: max-content;
   max-width: calc(100% - 24px);
 
@@ -29,6 +126,8 @@
   position: absolute;
   inset: 1px;
 
+  z-index: -1;
+
   border-radius: inherit;
 
   background:
@@ -44,6 +143,7 @@
 
 .top-menu a {
   position: relative;
+
   z-index: 1;
 
   display: block;
@@ -58,6 +158,7 @@
 
   font-size: 12px;
   font-weight: 600;
+
   letter-spacing: 0.15px;
 
   transition:
@@ -68,6 +169,7 @@
 
 .top-menu a:hover {
   color: #fff;
+
   background: rgba(255, 255, 255, 0.055);
 }
 
@@ -93,20 +195,18 @@
 h1 {
   position: relative;
 
-  margin: 125px 20px 14px;
+  width: fit-content;
+  max-width: calc(100% - 30px);
 
-  font-size: clamp(40px, 9vw, 64px);
-  font-weight: 900;
-  letter-spacing: -3px;
-  line-height: 0.98;
+  margin: 125px auto 16px;
 
   color: transparent;
 
   background:
     linear-gradient(
       135deg,
-      #00f5ff 0%,
-      #54efff 38%,
+      #00eaff 0%,
+      #54efff 36%,
       #ffffff 68%,
       #9eefff 100%
     );
@@ -116,7 +216,17 @@ h1 {
   -webkit-text-fill-color: transparent;
 
   filter:
-    drop-shadow(0 0 18px rgba(0, 234, 255, 0.08));
+    drop-shadow(
+      0 0 20px rgba(0, 234, 255, 0.08)
+    );
+
+  font-size: clamp(38px, 8vw, 64px);
+  font-weight: 900;
+
+  line-height: 1.05;
+  letter-spacing: -2.8px;
+
+  text-align: center;
 }
 
 h1::after {
@@ -124,7 +234,7 @@ h1::after {
 
   display: block;
 
-  width: 44px;
+  width: 46px;
   height: 2px;
 
   margin: 16px auto 0;
@@ -134,20 +244,22 @@ h1::after {
   background: var(--cyan);
 
   box-shadow:
-    0 0 16px rgba(0, 234, 255, 0.55);
+    0 0 18px rgba(0, 234, 255, 0.55);
 }
 
 body > p {
-  max-width: 620px;
+  width: min(620px, calc(100% - 40px));
 
-  margin: 0 auto 44px;
-  padding: 0 22px;
+  margin: 0 auto 42px;
 
   color: var(--muted);
 
   font-size: 12px;
-  line-height: 1.8;
-  letter-spacing: 0.65px;
+  line-height: 1.9;
+
+  letter-spacing: 0.5px;
+
+  text-align: center;
 }
 
 /* ================================
@@ -163,7 +275,8 @@ body > p {
 
   gap: 14px;
 
-  padding: 0 0 70px;
+  padding:
+    0 0 80px;
 }
 
 /* ================================
@@ -173,8 +286,8 @@ body > p {
 .track {
   position: relative;
 
-  width: min(92%, 580px);
-  min-height: 96px;
+  width: min(92%, 620px);
+  min-height: 98px;
 
   display: flex;
   align-items: center;
@@ -191,25 +304,26 @@ body > p {
   background:
     linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.075),
-      rgba(255, 255, 255, 0.032) 45%,
+      rgba(255, 255, 255, 0.065),
+      rgba(255, 255, 255, 0.028) 48%,
       rgba(0, 234, 255, 0.018)
     );
 
   box-shadow:
-    0 20px 55px rgba(0, 0, 0, 0.48),
-    inset 0 1px 0 rgba(255, 255, 255, 0.055);
+    0 22px 60px rgba(0, 0, 0, 0.46),
+    0 1px 0 rgba(255, 255, 255, 0.055) inset;
 
-  contain: layout paint;
+  isolation: isolate;
 }
 
 .track::before {
   content: "";
 
   position: absolute;
+
   top: 0;
-  left: 18px;
-  right: 18px;
+  left: 20px;
+  right: 20px;
 
   height: 1px;
 
@@ -217,11 +331,11 @@ body > p {
     linear-gradient(
       90deg,
       transparent,
-      rgba(255, 255, 255, 0.18),
+      rgba(255, 255, 255, 0.17),
       transparent
     );
 
-  opacity: 0.65;
+  opacity: 0.7;
 
   pointer-events: none;
 }
@@ -231,15 +345,20 @@ body > p {
 
   position: absolute;
 
-  width: 180px;
-  height: 180px;
+  width: 220px;
+  height: 220px;
 
-  top: -110px;
-  right: -90px;
+  top: -145px;
+  right: -100px;
 
   border-radius: 50%;
 
-  background: rgba(0, 220, 255, 0.035);
+  background:
+    radial-gradient(
+      circle,
+      rgba(0, 234, 255, 0.055),
+      transparent 70%
+    );
 
   pointer-events: none;
 }
@@ -250,7 +369,8 @@ body > p {
 
 .cover {
   position: relative;
-  z-index: 1;
+
+  z-index: 2;
 
   width: 70px;
   height: 70px;
@@ -267,8 +387,8 @@ body > p {
   background: #080c0f;
 
   box-shadow:
-    0 10px 28px rgba(0, 0, 0, 0.55),
-    0 0 0 1px rgba(0, 0, 0, 0.15);
+    0 12px 30px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(0, 0, 0, 0.2);
 
   user-select: none;
 }
@@ -279,7 +399,8 @@ body > p {
 
 .info {
   position: relative;
-  z-index: 2;
+
+  z-index: 3;
 
   flex: 1;
   min-width: 0;
@@ -288,20 +409,24 @@ body > p {
 }
 
 .title {
-  margin: 0 0 7px;
+  margin: 0 0 8px;
 
   color: #fff;
 
   font-size: 16px;
   font-weight: 750;
+
   line-height: 1.3;
 
-  letter-spacing: -0.15px;
+  letter-spacing: -0.2px;
 }
 
 .title a {
   color: #fff;
+
   text-decoration: none;
+
+  transition: color 0.2s ease;
 }
 
 .title a:hover {
@@ -315,6 +440,7 @@ body > p {
 .btns {
   display: flex;
   align-items: center;
+
   flex-wrap: wrap;
 
   gap: 7px;
@@ -323,17 +449,23 @@ body > p {
 .btns a {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 
-  min-height: 22px;
+  min-height: 23px;
 
-  padding: 3px 9px;
+  padding: 4px 10px;
 
-  border: 1px solid rgba(0, 234, 255, 0.08);
+  border: 1px solid rgba(0, 234, 255, 0.09);
   border-radius: 999px;
 
   color: rgba(0, 234, 255, 0.88);
 
-  background: rgba(0, 234, 255, 0.045);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 234, 255, 0.065),
+      rgba(0, 130, 255, 0.025)
+    );
 
   text-decoration: none;
 
@@ -343,17 +475,61 @@ body > p {
   line-height: 1;
 
   transition:
+    color 0.2s ease,
     background 0.2s ease,
     border-color 0.2s ease,
-    color 0.2s ease;
+    box-shadow 0.2s ease;
 }
 
 .btns a:hover {
   color: #fff;
 
-  background: rgba(0, 234, 255, 0.1);
+  background:
+    rgba(0, 234, 255, 0.105);
 
-  border-color: rgba(0, 234, 255, 0.2);
+  border-color:
+    rgba(0, 234, 255, 0.2);
+
+  box-shadow:
+    0 0 18px rgba(0, 234, 255, 0.055);
+}
+
+/* ================================
+   TRACK LINK
+================================ */
+
+.track a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ================================
+   SCROLLBAR
+================================ */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020405;
+}
+
+::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 234, 255, 0.35),
+      rgba(0, 100, 160, 0.25)
+    );
+
+  border-radius: 99px;
+
+  border: 2px solid #020405;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:
+    rgba(0, 234, 255, 0.55);
 }
 
 /* ================================
@@ -363,17 +539,17 @@ body > p {
 @media (max-width: 600px) {
 
   body {
-    padding-bottom: 65px;
+    padding-bottom: 60px;
 
     background:
       radial-gradient(
-        600px 350px at 50% -80px,
-        rgba(0, 220, 255, 0.12),
-        transparent 68%
+        600px 350px at 50% -100px,
+        rgba(0, 220, 255, 0.105),
+        transparent 70%
       ),
       radial-gradient(
-        450px 400px at 100% 80%,
-        rgba(0, 70, 150, 0.09),
+        500px 450px at 100% 80%,
+        rgba(0, 70, 150, 0.08),
         transparent 70%
       ),
       var(--bg);
@@ -395,22 +571,31 @@ body > p {
   }
 
   h1 {
+    max-width: calc(100% - 24px);
+
     margin-top: 94px;
-    margin-bottom: 12px;
+
+    margin-bottom: 13px;
 
     font-size: 40px;
+
     letter-spacing: -2.2px;
   }
 
   h1::after {
+    width: 40px;
+
     margin-top: 13px;
   }
 
   body > p {
+    width: calc(100% - 40px);
+
     margin-bottom: 31px;
 
     font-size: 11px;
-    letter-spacing: 0.45px;
+
+    line-height: 1.8;
   }
 
   .container {
@@ -453,7 +638,7 @@ body > p {
   .btns a {
     min-height: 20px;
 
-    padding: 3px 7px;
+    padding: 3px 8px;
 
     font-size: 9px;
   }
@@ -477,6 +662,7 @@ body > p {
 
   h1 {
     font-size: 35px;
+
     letter-spacing: -1.8px;
   }
 
@@ -504,6 +690,11 @@ body > p {
   .title {
     font-size: 14px;
   }
+
+  .btns a {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
 }
 
 /* ================================
@@ -521,7 +712,7 @@ body > p {
   h1 {
     font-size: 31px;
   }
-1
+
   .track {
     width: calc(100% - 12px);
   }
@@ -536,9 +727,10 @@ body > p {
 
 /* ================================
    ACCESSIBILITY
-=========ط======================= */
+================================ */
 
 @media (prefers-reduced-motion: reduce) {
+
   html {
     scroll-behavior: auto;
   }
@@ -548,4 +740,4 @@ body > p {
   *::after {
     transition: none !important;
   }
-  }
+}
