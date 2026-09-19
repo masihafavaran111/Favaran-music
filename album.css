@@ -44,50 +44,52 @@ a {
 
   transform: translateX(-50%);
 
+  z-index: 9999;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
-  gap: 8px;
-
-  padding: 7px;
+  gap: 5px;
+  padding: 6px;
 
   width: max-content;
-
   max-width: calc(100% - 24px);
 
-  border-radius: 999px;
+  background: rgba(12, 12, 12, 0.82);
 
-  background: rgba(5, 12, 15, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.10);
 
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
-
-  border: 1px solid rgba(0, 220, 255, 0.13);
+  border-radius: 16px;
 
   box-shadow:
-    0 15px 50px rgba(0, 0, 0, 0.7),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    0 20px 60px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
 
-  z-index: 9999;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 }
 
 .top-menu a {
   display: block;
 
-  padding: 10px 18px;
+  padding: 10px 17px;
 
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(255, 255, 255, 0.60);
 
   text-decoration: none;
 
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 600;
 
-  font-weight: 500;
+  border-radius: 11px;
 
-  letter-spacing: 0.2px;
+  transition: 0.2s ease;
+}
 
-  border-radius: 999px;
+.top-menu a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .top-menu a[href="album.html"] {
@@ -165,21 +167,33 @@ a {
     0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .top-menu {
-    top: 12px;
+    top: 11px;
 
-    gap: 3px;
+    gap: 2px;
 
-    padding: 6px;
+    padding: 5px;
+
+    border-radius: 15px;
   }
 
   .top-menu a {
-    padding: 9px 12px;
+    padding: 9px 11px;
 
-    font-size: 12px;
+    font-size: 11px;
   }
+}
 
+@media (max-width: 390px) {
+  .top-menu a {
+    padding: 8px 8px;
+
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) {
   .center {
     padding-top: 90px;
   }
@@ -200,13 +214,7 @@ a {
 }
 
 @media (max-width: 380px) {
-  .top-menu a {
-    padding: 8px 9px;
-
-    font-size: 11px;
-  }
-
   .center h1 {
     font-size: 42px;
   }
-  }
+}
