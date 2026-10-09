@@ -630,3 +630,13 @@ button {
   border-radius: 10px;
   box-sizing: border-box;
 }
+/* FIX NAVIGATION ORDER */
+
+.top-menu {
+direction: rtl;
+flex-direction: row;
+}
+
+.top-menu a {
+direction: rtl;
+}
