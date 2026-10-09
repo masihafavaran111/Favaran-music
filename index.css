@@ -1180,3 +1180,13 @@ h1::after {
     transition: none !important;
   }
       }
+/* FIX NAVIGATION ORDER */
+
+.top-menu {
+direction: rtl;
+flex-direction: row;
+}
+
+.top-menu a {
+direction: rtl;
+}
