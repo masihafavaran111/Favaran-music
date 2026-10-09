@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="music.css"><title>Hypnagogia | مسیحا فوران</title><meta name="description" content="Hypnagogia — Masiha Favaran. تجربه‌ای تاریک میان خواب و بیداری."></head><body><div class="top-nav">
+  <a href="index.html">بیوگرافی</a>
+  <a href="tracks.html">لیست‌موزیک‌ها</a>
+  <a href="album.html">آلبوم‌ها</a>
+</div><div class="box">  <div class="header">
+    <div>Masiha Favaran</div>
+    <div>Hypnagogia</div>
+    <div class="release-date">1405</div>
+  </div>  <img src="Hypnagogia.webp" alt="Hypnagogia Cover - Masiha Favaran">  <audio controls preload="metadata">
+    <source src="Hypnagogia.mp3" type="audio/mpeg">
+    مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
+  </audio>  <a class="download" href="Hypnagogia.mp3" download>
+    Download High Quality
+  </a>  <div id="viewCount">
+    بازدید: درحال محاسبه بازدید
+  </div>  <div class="lyrics"><h2>Lyrics</h2>
+
+<span class="section">Verse 1</span>
+
+<!-- متن آهنگ Hypnagogia را اینجا قرار بده -->
+
+  </div></div><script type="module">
+
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+const supabase = createClient(
+  "https://mzavzvvyowlvechemkdo.supabase.co",
+  "sb_publishable_HgJ3Y88QZRXOT976GJrjRg_XlPpUdg-"
+);
+
+const TRACK_ID = 6;
+const STORAGE_KEY = "Hypnagogia_viewed";
+
+async function addView() {
+
+  if (localStorage.getItem(STORAGE_KEY)) {
+    return;
+  }
+
+  const { data, error } = await supabase
+    .from("tracks")
+    .select("views")
+    .eq("id", TRACK_ID)
+    .single();
+
+  if (error) {
+    console.error("Error fetching track views:", error);
+    return;
+  }
+
+  const { error: updateError } = await supabase
+    .from("tracks")
+    .update({
+      views: (data.views || 0) + 1
+    })
+    .eq("id", TRACK_ID);
+
+  if (updateError) {
+    console.error("Error updating track views:", updateError);
+    return;
+  }
+
+  localStorage.setItem(STORAGE_KEY, "true");
+}
+
+async function showViews() {
+
+  const { data, error } = await supabase
+    .from("tracks")
+    .select("views")
+    .eq("id", TRACK_ID)
+    .single();
+
+  if (error) {
+    console.error("Error displaying track views:", error);
+
+    document.getElementById("viewCount").textContent =
+      "خطا در دریافت بازدید";
+
+    return;
+  }
+
+  document.getElementById("viewCount").textContent =
+    "بازدید: " + (data.views || 0);
+}
+
+(async () => {
+  await addView();
+  await showViews();
+})();
+
+</script></body>
+</html>
