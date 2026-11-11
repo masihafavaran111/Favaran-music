@@ -124,10 +124,6 @@ a {
   -webkit-touch-callout: none;
 }
 
-/* =========================================
-   TOP MENU
-========================================= */
-
 .top-menu {
   position: fixed;
   top: 18px;
@@ -181,10 +177,6 @@ a {
   color: #fff;
   background: rgba(255, 255, 255, 0.08);
 }
-
-/* =========================================
-   MAIN BOX
-========================================= */
 
 .box {
   position: relative;
@@ -270,10 +262,6 @@ a {
   pointer-events: none;
 }
 
-/* =========================================
-   TITLE
-========================================= */
-
 h1 {
   position: relative;
 
@@ -349,10 +337,6 @@ h1::after {
     0 0 40px rgba(0,234,255,0.45);
 }
 
-/* =========================================
-   PHOTO
-========================================= */
-
 .bio-photo {
   position: relative;
 
@@ -422,10 +406,6 @@ h1::after {
 
   text-transform: uppercase;
 }
-
-/* =========================================
-   BIO
-========================================= */
 
 .bio {
   position: relative;
@@ -510,10 +490,6 @@ h1::after {
 .bio br + br {
   line-height: 2.5;
 }
-
-/* =========================================
-   COSMIC MUSIC
-========================================= */
 
 .cosmic-music {
   position: relative;
@@ -606,10 +582,6 @@ h1::after {
   pointer-events: none;
 }
 
-/* =========================================
-   STARS
-========================================= */
-
 .cosmic-stars {
   position: absolute;
   inset: 0;
@@ -646,10 +618,6 @@ h1::after {
   pointer-events: none;
 }
 
-/* =========================================
-   COSMIC CONTENT
-========================================= */
-
 .cosmic-content {
   position: relative;
 
@@ -672,9 +640,6 @@ h1::after {
     0 0 14px rgba(0,234,255,0.35);
 }
 
-/* =========================================
-   ORBIT
-========================================= */
 
 .cosmic-orbit {
   position: relative;
@@ -778,9 +743,6 @@ h1::after {
     0 0 18px var(--cyan);
 }
 
-/* =========================================
-   COSMIC TITLE
-========================================= */
 
 .cosmic-title {
   position: relative;
@@ -812,9 +774,6 @@ h1::after {
   line-height: 2;
 }
 
-/* =========================================
-   COSMIC BUTTON
-========================================= */
 
 .cosmic-button {
   position: relative;
@@ -928,9 +887,6 @@ h1::after {
   transform: translateX(-6px);
 }
 
-/* =========================================
-   FOOTER
-========================================= */
 
 .cosmic-footer {
   position: relative;
@@ -967,9 +923,6 @@ h1::after {
     0 0 12px rgba(0,234,255,0.35);
 }
 
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 600px) {
 
@@ -1079,9 +1032,6 @@ h1::after {
   }
 }
 
-/* =========================================
-   SMALL PHONES
-========================================= */
 
 @media (max-width: 380px) {
 
@@ -1128,10 +1078,6 @@ h1::after {
   }
 }
 
-/* =========================================
-   TINY PHONES
-========================================= */
-
 @media (max-width: 330px) {
 
   .top-menu a {
@@ -1164,9 +1110,6 @@ h1::after {
   }
 }
 
-/* =========================================
-   ACCESSIBILITY
-========================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -1180,7 +1123,6 @@ h1::after {
     transition: none !important;
   }
       }
-/* FIX NAVIGATION ORDER */
 
 .top-menu {
 direction: rtl;
@@ -1189,4 +1131,41 @@ flex-direction: row;
 
 .top-menu a {
 direction: rtl;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 350px;
+  margin: 30px auto;
+}
+
+.social-links a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 20px;
+
+  color: #00eaff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+
+  background: rgba(0, 234, 255, 0.04);
+  border: 1px solid rgba(0, 234, 255, 0.15);
+  border-radius: 14px;
+
+  transition: 0.25s;
+}
+
+.social-links a:hover {
+  background: rgba(0, 234, 255, 0.10);
+  border-color: #00eaff;
+  transform: translateY(-3px);
+}
+
+.social-links a span {
+  font-size: 19px;
 }
