@@ -1,3 +1,4 @@
+
 :root {
   --bg: #030507;
   --bg-soft: #070b0f;
@@ -90,6 +91,7 @@ a {
   z-index: 9999;
 
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
 
