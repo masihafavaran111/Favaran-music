@@ -118,13 +118,13 @@ a {
 .top-menu a {
   display: block;
 
-  padding: 10px 17px;
+  padding: 10px 25px;
 
   color: rgba(255, 255, 255, 0.60);
 
   text-decoration: none;
 
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
 
   border-radius: 11px;
@@ -479,9 +479,9 @@ body > p {
   }
 
   .top-menu a {
-    padding: 9px 11px;
+    padding: 9px 14px;
 
-    font-size: 11px;
+    font-size: 13px;
   }
 
   h1 {
@@ -564,9 +564,9 @@ body > p {
   }
 
   .top-menu a {
-    padding: 8px 9px;
+    padding: 8px 10px;
 
-    font-size: 10px;
+    font-size: 11px;
   }
 
   h1 {
